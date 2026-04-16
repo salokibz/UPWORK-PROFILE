@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Salim Kibet Cheptoek | Freelance WordPress Developer & IT Support Specialist — Toronto, Canada</title>
+<meta name="description" content="Hire Salim Kibet Cheptoek — Top Rated freelance WordPress developer & IT support specialist in Toronto. 100+ projects delivered. WordPress, GoHighLevel, Webflow, Wix, WooCommerce & custom web solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:'Inter',sans-serif;background:#FFFFFF;color:#777;line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;display:block}
+
+:root{
+  --accent:#EE4619;
+  --accent-h:#D93D15;
+  --accent-light:#FF6B42;
+  --orange:#EF7216;
+  --orange-glow:rgba(239,114,22,.12);
+  --orange-glow-s:rgba(239,114,22,.25);
+  --peach:#FFBC7D;
+  --peach-light:#FDEFE4;
+  --navy:#10205E;
+  --navy-light:#1a2d6d;
+  --dark:#19191F;
+  --text:#777777;
+  --text-alt:#666C84;
+  --text-light:#999;
+  --bg:#FFFFFF;
+  --bg-alt:#F6F7FB;
+  --bg-card:#EBF1F3;
+  --bg-warm:#FDEFE4;
+  --mint:#D9F4ED;
+  --mint-d:#58C09C;
+  --green:#6CAD4F;
+  --lavender:#E6D9F1;
+  --lavender-d:#9672C4;
+  --gold:#F9E1B2;
+  --gold-d:#D4A843;
+  --sky:#FFDAB6;
+  --border:rgba(25,25,31,.08);
+  --border-h:rgba(238,70,25,.2);
+  --radius:20px;
+  --radius-s:14px;
+  --max-w:1260px;
+  --ease:cubic-bezier(.25,.46,.45,.94);
+  --bounce:cubic-bezier(.34,1.56,.64,1);
+  --t:.4s;
+}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 28px}
+
+/* === SVG ICONS === */
+.ico{display:inline-block;vertical-align:-.15em;flex-shrink:0;width:1em;height:1em}
+.port-cat .ico{width:13px;height:13px}
+.port-loc .ico{width:13px;height:13px;opacity:.7}
+.about-badge .ico{width:13px;height:13px}
+.ts-icon .ico{width:22px;height:22px}
+.test-av .ico{width:20px;height:20px}
+.trusted-logo .ico{width:14px;height:14px;opacity:.4}
+.ts-tag .ico{width:11px;height:11px;opacity:.6}
+
+/* === PAGE LOADER === */
+.page-loader{position:fixed;inset:0;z-index:9999;background:#FFBC7D;display:flex;align-items:center;justify-content:center;transition:opacity .6s ease,visibility .6s ease}
+.page-loader.hide{opacity:0;visibility:hidden;pointer-events:none}
+.loader-dot{width:14px;height:14px;border-radius:50%;background:var(--accent);margin:0 6px;animation:loaderBounce .6s ease infinite alternate}
+.loader-dot:nth-child(2){animation-delay:.15s}.loader-dot:nth-child(3){animation-delay:.3s}
+@keyframes loaderBounce{to{transform:translateY(-18px);opacity:.3}}
+
+/* === NAV === */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.88);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border-bottom:1px solid var(--border);transition:box-shadow var(--t) var(--ease)}
+.nav.scrolled{box-shadow:0 4px 40px rgba(0,0,0,.06)}
+.nav-inner{max-width:var(--max-w);margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;height:76px}
+.nav-logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1.05rem;color:var(--dark)}
+.nav-logo-mark{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--orange));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.95rem;color:#fff;box-shadow:0 4px 20px var(--orange-glow);transition:transform var(--t) var(--bounce)}
+.nav-logo:hover .nav-logo-mark{transform:rotate(-8deg) scale(1.08)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{padding:10px 18px;border-radius:10px;font-size:.84rem;font-weight:500;color:var(--text);transition:all var(--t) var(--ease)}
+.nav-links a:hover{color:var(--dark);background:var(--bg-alt)}
+.nav-links a.active{color:var(--accent);font-weight:600}
+.nav-cta{padding:11px 26px;border-radius:60px;font-size:.82rem;font-weight:600;background:var(--accent);color:#fff;border:none;cursor:pointer;transition:all var(--t) var(--ease);box-shadow:0 4px 16px rgba(238,70,25,.2)}
+.nav-cta:hover{background:var(--accent-h);transform:translateY(-2px);box-shadow:0 6px 24px rgba(238,70,25,.3)}
+.mobile-toggle{display:none;background:none;border:none;cursor:pointer;width:44px;height:44px;flex-direction:column;align-items:center;justify-content:center;gap:6px}
+.mobile-toggle span{display:block;width:24px;height:2px;background:var(--dark);border-radius:2px;transition:var(--t) var(--ease)}
+.mobile-menu{display:none;position:fixed;top:76px;left:0;right:0;bottom:0;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);z-index:999;padding:32px 28px}
+.mobile-menu.open{display:flex;flex-direction:column;gap:4px;animation:slideDown .3s ease}
+@keyframes slideDown{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:translateY(0)}}
+.mobile-menu a{font-size:1.05rem;padding:18px 20px;border-radius:14px;color:var(--text);font-weight:500;transition:var(--t)}
+.mobile-menu a:hover{background:var(--bg-alt);color:var(--dark)}
+
+/* === HERO === */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:76px 0 60px;background:#FFFFFF}
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden}
+.hero-bg-orb1{position:absolute;width:800px;height:800px;top:-300px;right:-250px;border-radius:50%;background:radial-gradient(circle,rgba(239,114,22,.08),transparent 65%);animation:float 14s ease-in-out infinite}
+.hero-bg-orb2{position:absolute;width:600px;height:600px;bottom:-200px;left:-150px;border-radius:50%;background:radial-gradient(circle,rgba(88,192,156,.06),transparent 65%);animation:float 18s ease-in-out infinite reverse}
+.hero-bg-orb3{position:absolute;width:400px;height:400px;top:20%;left:30%;border-radius:50%;background:radial-gradient(circle,rgba(238,70,25,.04),transparent 65%);animation:float 10s ease-in-out infinite 2s}
+@keyframes float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-50px) scale(1.05)}}
+.hero-grid{position:absolute;inset:0;opacity:.018;background-image:linear-gradient(var(--dark) 1px,transparent 1px),linear-gradient(90deg,var(--dark) 1px,transparent 1px);background-size:80px 80px}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.hero-content{max-width:600px}
+.hero-tag{display:inline-flex;align-items:center;gap:10px;padding:10px 22px;border-radius:60px;background:var(--peach-light);border:1px solid rgba(239,114,22,.15);font-size:.78rem;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:.06em;margin-bottom:28px;animation:fadeUp .7s ease both}
+.hero-tag-dot{width:8px;height:8px;border-radius:50%;background:var(--accent);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.6)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+.hero h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:800;line-height:1.08;letter-spacing:-.04em;color:var(--dark);margin-bottom:20px;animation:fadeUp .7s .1s ease both}
+.hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--accent),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;position:relative}
+.hero-desc{font-size:1.08rem;color:var(--text);max-width:500px;margin-bottom:36px;animation:fadeUp .7s .2s ease both;line-height:1.8}
+.hero-stats{display:flex;gap:48px;margin-bottom:40px;animation:fadeUp .7s .3s ease both}
+.stat-item{position:relative}
+.stat-n{font-size:2.2rem;font-weight:800;color:var(--dark);letter-spacing:-.03em;line-height:1}
+.stat-n span{background:linear-gradient(135deg,var(--accent),var(--orange));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-l{font-size:.7rem;color:var(--text-light);font-weight:600;text-transform:uppercase;letter-spacing:.12em;margin-top:6px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp .7s .4s ease both}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 34px;border-radius:60px;font-size:.88rem;font-weight:600;border:none;cursor:pointer;transition:all var(--t) var(--ease);position:relative;overflow:hidden}
+.btn svg{width:18px;height:18px;transition:transform var(--t)}
+.btn:hover svg{transform:translateX(3px)}
+.btn-p{background:linear-gradient(135deg,var(--accent),var(--orange));color:#fff;box-shadow:0 6px 30px var(--orange-glow-s)}
+.btn-p:hover{transform:translateY(-3px);box-shadow:0 12px 40px var(--orange-glow-s)}
+.btn-p::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.2),transparent);opacity:0;transition:opacity var(--t)}
+.btn-p:hover::after{opacity:1}
+.btn-s{background:#fff;border:2px solid var(--border);color:var(--dark)}
+.btn-s:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.06)}
+
+/* Hero Visual */
+.hero-visual{position:relative;animation:fadeUp .8s .3s ease both}
+.browser-frame{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.08),0 0 0 1px rgba(0,0,0,.04);transform:perspective(1200px) rotateY(-5deg) rotateX(3deg);transition:transform .8s var(--ease)}
+.browser-frame:hover{transform:perspective(1200px) rotateY(0) rotateX(0)}
+.browser-bar{display:flex;align-items:center;gap:8px;padding:14px 18px;background:var(--bg-alt);border-bottom:1px solid var(--border)}
+.browser-dot{width:10px;height:10px;border-radius:50%}
+.browser-url{flex:1;margin-left:12px;background:#fff;border-radius:8px;padding:7px 16px;font-size:.72rem;color:var(--text-light);border:1px solid var(--border)}
+.browser-body{padding:30px;background:linear-gradient(135deg,#1a1e2e,#1d2235);display:grid;gap:0}
+.uw-profile{color:#fff}
+.uw-header{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.uw-avatar{width:56px;height:56px;border-radius:50%;overflow:hidden;border:2px solid #14a800;flex-shrink:0;position:relative}
+.uw-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.uw-avatar::before{content:'';position:absolute;top:0;right:0;width:12px;height:12px;background:#14a800;border-radius:50%;border:2px solid #1a1e2e;z-index:1}
+.uw-name{font-size:1.1rem;font-weight:700;color:#fff;display:flex;align-items:center;gap:6px}
+.uw-name .uw-verified{width:16px;height:16px;background:#3894ff;border-radius:50%;display:inline-flex;align-items:center;justify-content:center}
+.uw-name .uw-verified svg{width:10px;height:10px;fill:#fff}
+.uw-loc{font-size:.72rem;color:rgba(255,255,255,.5);margin-top:2px}
+.uw-badges{display:flex;gap:8px;margin-top:6px}
+.uw-badge{padding:4px 10px;border-radius:60px;font-size:.6rem;font-weight:600;display:inline-flex;align-items:center;gap:4px}
+.uw-badge.success{background:rgba(20,168,0,.15);color:#14a800}
+.uw-badge.top{background:rgba(56,148,255,.15);color:#3894ff}
+.uw-title{font-size:.82rem;font-weight:600;color:rgba(255,255,255,.85);margin-bottom:16px;line-height:1.5}
+.uw-stats{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;padding-top:16px;border-top:1px solid rgba(255,255,255,.08)}
+.uw-stat-n{font-size:1.15rem;font-weight:800;color:#fff}
+.uw-stat-l{font-size:.6rem;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.08em;margin-top:2px}
+.uw-rate{display:flex;align-items:center;gap:6px;margin-top:16px;padding-top:14px;border-top:1px solid rgba(255,255,255,.08)}
+.uw-rate-amount{font-size:1rem;font-weight:700;color:#fff}
+.uw-rate-label{font-size:.65rem;color:rgba(255,255,255,.4)}
+
+/* === TRUSTED BAR === */
+.trusted{padding:50px 0;background:var(--bg-alt);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.trusted-inner{text-align:center}
+.trusted-label{font-size:.72rem;font-weight:700;color:var(--text-light);text-transform:uppercase;letter-spacing:.18em;margin-bottom:24px}
+.trusted-logos{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;opacity:.5}
+.trusted-logo{font-weight:800;font-size:1.1rem;color:var(--dark);letter-spacing:-.02em;display:inline-flex;align-items:center;gap:10px}
+.trusted-logo::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--accent);opacity:.35;flex-shrink:0}
+.trusted-logo:first-child::before{display:none}
+
+/* === SECTION SHARED === */
+.sec-pad{padding:120px 0}
+.sec-head{margin-bottom:64px}
+.sec-tag{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.16em;margin-bottom:18px;padding:8px 18px;border-radius:60px;background:rgba(238,70,25,.06);border:1px solid rgba(238,70,25,.1)}
+.sec-title{font-size:clamp(2rem,3.5vw,3rem);font-weight:800;color:var(--dark);letter-spacing:-.04em;line-height:1.1}
+.sec-desc{font-size:1.02rem;color:var(--text);max-width:600px;margin-top:18px;line-height:1.8}
+.sec-head.center{text-align:center}
+.sec-head.center .sec-desc{margin-left:auto;margin-right:auto}
+
+/* === ABOUT === */
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.about-card{background:#fff;border:1px solid var(--border);border-radius:24px;padding:50px 40px;text-align:center;position:relative;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.05);transition:all .5s var(--ease)}
+.about-card:hover{transform:translateY(-6px);box-shadow:0 30px 80px rgba(0,0,0,.08)}
+.about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--accent),var(--orange),var(--peach));border-radius:24px 24px 0 0}
+.about-avatar{width:130px;height:130px;margin:0 auto 24px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--orange),var(--peach));padding:4px;box-shadow:0 10px 40px var(--orange-glow)}
+.about-avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center top;display:block}
+.about-name{font-size:1.35rem;font-weight:800;color:var(--dark);margin-bottom:4px}
+.about-title-card{font-size:.84rem;color:var(--accent);font-weight:600;margin-bottom:24px}
+.about-badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.about-badge{padding:8px 16px;border-radius:60px;font-size:.72rem;font-weight:600;background:var(--bg-alt);border:1px solid var(--border);color:var(--text-alt);transition:all var(--t)}
+.about-badge:hover{border-color:var(--border-h);background:var(--peach-light);color:var(--accent)}
+.about-text h3{font-size:1.6rem;font-weight:800;color:var(--dark);margin-bottom:20px;letter-spacing:-.03em;line-height:1.2}
+.about-text p{color:var(--text);margin-bottom:16px;font-size:.95rem;line-height:1.85}
+.about-text p strong{color:var(--dark);font-weight:600}
+.about-chips{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:32px}
+.about-chip{padding:24px;border-radius:var(--radius-s);background:#fff;border:1px solid var(--border);transition:all var(--t) var(--ease);position:relative;overflow:hidden}
+.about-chip:hover{border-color:var(--border-h);transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.05)}
+.about-chip::after{content:'';position:absolute;top:0;left:0;width:3px;height:100%;border-radius:3px 0 0 3px}
+.about-chip:nth-child(1)::after{background:var(--accent)}.about-chip:nth-child(2)::after{background:var(--mint-d)}.about-chip:nth-child(3)::after{background:var(--orange)}.about-chip:nth-child(4)::after{background:var(--lavender-d)}
+.about-chip-n{font-size:1.65rem;font-weight:800;color:var(--dark);letter-spacing:-.02em}
+.about-chip-l{font-size:.7rem;color:var(--text-light);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
+
+/* === PORTFOLIO === */
+.portfolio-sec{background:var(--bg-alt)}
+.port-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:48px}
+.port-tab{padding:11px 24px;border-radius:60px;font-size:.8rem;font-weight:600;background:#fff;border:1px solid var(--border);color:var(--text);cursor:pointer;transition:all var(--t) var(--ease);white-space:nowrap}
+.port-tab:hover{border-color:var(--accent);color:var(--accent)}
+.port-tab.active{background:linear-gradient(135deg,var(--accent),var(--orange));color:#fff;border-color:transparent;box-shadow:0 4px 16px var(--orange-glow)}
+.port-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:28px}
+
+.port-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all .5s var(--ease);cursor:pointer;position:relative}
+.port-card:hover{border-color:var(--border-h);transform:translateY(-8px);box-shadow:0 24px 60px rgba(0,0,0,.08)}
+.port-preview{height:210px;position:relative;overflow:hidden}
+.port-gradient{width:100%;height:100%;display:flex;align-items:center;justify-content:center;position:relative}
+.port-gradient::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,#fff,transparent 50%)}
+.port-browser{position:relative;z-index:2;width:82%;background:rgba(255,255,255,.95);border-radius:10px;border:1px solid rgba(0,0,0,.06);overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.08);transform:translateY(8px);transition:transform .5s var(--ease)}
+.port-card:hover .port-browser{transform:translateY(0)}
+.port-browser-bar{display:flex;align-items:center;gap:5px;padding:9px 12px;background:var(--bg-alt);border-bottom:1px solid var(--border)}
+.port-browser-bar .dot{width:7px;height:7px;border-radius:50%}
+.port-browser-bar .url{margin-left:10px;font-size:.65rem;color:var(--text-light)}
+.port-browser-body{padding:16px;display:flex;flex-direction:column;gap:8px}
+.port-browser-body .line{height:6px;border-radius:4px;background:var(--bg-card)}.port-browser-body .line.a{width:55%}.port-browser-body .line.b{width:80%}.port-browser-body .line.c{width:40%;background:var(--peach)}
+.port-browser-body.has-img{padding:0}
+.port-browser-body.has-img img{width:100%;height:140px;object-fit:cover;object-position:top;display:block}
+.port-body{padding:28px 28px 20px}
+.port-cat{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:60px;font-size:.68rem;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:.06em}
+.cat-service{background:rgba(88,192,156,.1);color:var(--mint-d)}
+.cat-health{background:rgba(108,173,79,.1);color:var(--green)}
+.cat-ecommerce{background:rgba(239,114,22,.1);color:var(--orange)}
+.cat-tech{background:rgba(150,114,196,.1);color:var(--lavender-d)}
+.cat-corporate{background:rgba(16,32,94,.08);color:var(--navy)}
+.cat-nonprofit{background:rgba(238,70,25,.08);color:var(--accent)}
+.cat-mobile{background:rgba(212,168,67,.1);color:var(--gold-d)}
+.port-card h3{font-size:1.12rem;font-weight:700;color:var(--dark);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.port-card h3 .arr{opacity:0;transform:translateX(-6px);transition:all var(--t) var(--ease);color:var(--accent)}
+.port-card:hover h3 .arr{opacity:1;transform:translateX(0)}
+.port-card p{font-size:.84rem;color:var(--text);line-height:1.75}
+.port-foot{padding:16px 28px;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
+.port-loc{font-size:.76rem;color:var(--text-light);font-weight:500}
+.port-link{font-size:.76rem;color:var(--accent);font-weight:700;display:flex;align-items:center;gap:4px;transition:gap var(--t)}
+.port-link:hover{gap:8px}
+
+.g-peach{background:linear-gradient(135deg,#FFF8F2,#FDEFE4,#FFF0E6)}
+.g-mint{background:linear-gradient(135deg,#F0FBF7,#D9F4ED,#E5F8F2)}
+.g-orange{background:linear-gradient(135deg,#FFF4E6,#FFDAB6,#FFF0D9)}
+.g-lavender{background:linear-gradient(135deg,#F5F0FB,#E6D9F1,#EDE4F5)}
+.g-gold{background:linear-gradient(135deg,#FFFBF0,#F9E1B2,#FFF5D9)}
+.g-sky{background:linear-gradient(135deg,#F0F5FF,#D9E6FF,#E5EDFF)}
+.g-navy{background:linear-gradient(135deg,#EBF1F3,#DCE5E9,#E5EDF0)}
+
+/* === FLIP TITLE === */
+.flip-title{perspective:1200px;cursor:pointer;position:relative;margin-bottom:0}
+.flip-title-inner{transition:transform .7s var(--ease);transform-style:preserve-3d;position:relative}
+.flip-title.flipped .flip-title-inner{transform:rotateY(180deg)}
+.flip-front,.flip-back{backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.flip-front{display:flex;align-items:center;gap:14px}
+.flip-front .sec-title{margin:0}
+.flip-front .flip-hint{font-size:.65rem;color:var(--text-light);font-weight:500;letter-spacing:.04em;opacity:.6;transition:all var(--t);padding:6px 14px;border:1px dashed var(--border);border-radius:60px}
+.flip-title:hover .flip-hint{opacity:1;border-color:var(--accent);color:var(--accent)}
+.flip-back{position:absolute;top:0;left:0;right:0;bottom:0;transform:rotateY(180deg);display:flex;flex-wrap:wrap;gap:8px;align-items:center;align-content:center}
+.flip-back .fb-label{font-size:.78rem;font-weight:700;color:var(--dark);text-transform:uppercase;letter-spacing:.12em;margin-right:6px}
+.flip-back .fb-tag{padding:6px 16px;border-radius:60px;font-size:.73rem;font-weight:600;background:#fff;border:1px solid var(--border);color:var(--text-alt);transition:all var(--t);white-space:nowrap}
+.flip-back .fb-tag:hover{border-color:var(--accent);color:var(--accent);background:var(--peach-light)}
+
+/* === TROUBLESHOOT === */
+.ts-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:24px}
+.ts-card{padding:30px;border-radius:var(--radius);background:#fff;border:1px solid var(--border);transition:all .5s var(--ease);position:relative;overflow:hidden}
+.ts-card:hover{border-color:var(--border-h);transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,.06)}
+.ts-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(to bottom,var(--accent),var(--orange));border-radius:4px 0 0 4px}
+.ts-top{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px}
+.ts-icon{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;transition:transform var(--t) var(--bounce)}
+.ts-card:hover .ts-icon{transform:scale(1.08) rotate(-3deg)}
+.ts-icon.ico-fix{background:var(--peach-light);border:1px solid rgba(239,114,22,.12)}
+.ts-icon.ico-server{background:var(--mint);border:1px solid rgba(88,192,156,.15)}
+.ts-icon.ico-design{background:var(--lavender);border:1px solid rgba(150,114,196,.12)}
+.ts-icon.ico-email{background:var(--gold);border:1px solid rgba(212,168,67,.15)}
+.ts-icon.ico-perf{background:rgba(238,70,25,.06);border:1px solid rgba(238,70,25,.1)}
+.ts-card h4{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:3px}
+.ts-card h4 a{color:var(--dark);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(0,0,0,.1);transition:text-decoration-color var(--t)}
+.ts-card h4 a:hover{text-decoration-color:var(--accent);color:var(--accent)}
+.ts-subtitle{font-size:.78rem;color:var(--accent);font-weight:600}
+.ts-detail{font-size:.84rem;color:var(--text);line-height:1.8;margin-bottom:16px}
+.ts-tags{display:flex;flex-wrap:wrap;gap:6px}
+.ts-tag{font-size:.68rem;font-weight:600;padding:5px 14px;border-radius:60px;background:var(--bg-alt);border:1px solid var(--border);color:var(--text-alt);text-transform:uppercase;letter-spacing:.04em;transition:all var(--t)}
+.ts-tag:hover{border-color:var(--border-h)}
+.ts-tag.live{background:rgba(88,192,156,.1);color:var(--mint-d);border-color:rgba(88,192,156,.2);font-weight:700}
+
+/* === TECH === */
+.tech-wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
+.tech-item{display:flex;flex-direction:column;align-items:center;gap:14px;padding:30px 24px;border-radius:var(--radius);background:#fff;border:1px solid var(--border);width:135px;transition:all .5s var(--ease)}
+.tech-item:hover{border-color:var(--border-h);transform:translateY(-6px);box-shadow:0 14px 40px rgba(0,0,0,.06)}
+.tech-ico{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;transition:transform var(--t) var(--bounce)}
+.tech-item:hover .tech-ico{transform:scale(1.1) rotate(-5deg)}
+.tech-nm{font-size:.74rem;font-weight:600;color:var(--text-alt);text-align:center}
+
+/* === TOOLS & PLUGINS === */
+.tp-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));gap:24px}
+.tp-card{padding:28px 30px;border-radius:var(--radius);background:#fff;border:1px solid var(--border);position:relative;overflow:hidden;transition:all .5s var(--ease)}
+.tp-card:hover{border-color:var(--border-h);transform:translateY(-4px);box-shadow:0 14px 40px rgba(0,0,0,.06)}
+.tp-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;border-radius:4px 0 0 4px}
+.tp-card:nth-child(1)::before{background:var(--accent)}
+.tp-card:nth-child(2)::before{background:var(--navy)}
+.tp-card:nth-child(3)::before{background:var(--green)}
+.tp-card:nth-child(4)::before{background:var(--orange)}
+.tp-card:nth-child(5)::before{background:var(--lavender-d)}
+.tp-card:nth-child(6)::before{background:var(--mint-d)}
+.tp-card:nth-child(7)::before{background:#4285f4}
+.tp-card:nth-child(8)::before{background:#777bb3}
+.tp-card:nth-child(9)::before{background:var(--gold-d)}
+.tp-card-head{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.tp-card-ico{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.tp-card-ico svg{width:20px;height:20px}
+.tp-card-title{font-size:.92rem;font-weight:700;color:var(--dark)}
+.tp-card-note{font-size:.72rem;color:var(--text);line-height:1.6;margin-bottom:14px;padding:10px 14px;border-radius:10px;background:var(--bg-alt);border:1px solid var(--border)}
+.tp-pills{display:flex;flex-wrap:wrap;gap:6px}
+.tp-pill{padding:6px 14px;border-radius:60px;font-size:.7rem;font-weight:600;background:var(--bg-alt);border:1px solid var(--border);color:var(--text-alt);transition:all var(--t);white-space:nowrap}
+.tp-pill:hover{border-color:var(--accent);color:var(--accent);background:var(--peach-light)}
+.tp-card.tp-security{background:linear-gradient(135deg,#f8fbff,#f0f4ff);border-color:rgba(16,32,94,.12)}
+.tp-card.tp-security::before{background:linear-gradient(to bottom,var(--navy),#3b5bdb)}
+.tp-card.tp-security .tp-card-ico{background:rgba(16,32,94,.1);color:var(--navy)}
+.tp-card.tp-security .tp-pill{background:rgba(16,32,94,.06);border-color:rgba(16,32,94,.1);color:var(--navy)}
+.tp-card.tp-security .tp-pill:hover{background:var(--navy);color:#fff;border-color:var(--navy)}
+
+/* === CERTIFICATIONS === */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px}
+.cert-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:32px;position:relative;overflow:hidden;transition:all .5s var(--ease)}
+.cert-card:hover{border-color:var(--border-h);transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,.06)}
+.cert-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;border-radius:4px 0 0 4px}
+.cert-card.prov-ibm::before{background:linear-gradient(to bottom,#0530ad,#4589ff)}
+.cert-card.prov-google::before{background:linear-gradient(to bottom,#4285f4,#34a853)}
+.cert-card.prov-meta::before{background:linear-gradient(to bottom,#0081fb,#00c2ff)}
+.cert-card.prov-cisco::before{background:linear-gradient(to bottom,#049fd9,#005073)}
+.cert-card.prov-zendesk::before{background:linear-gradient(to bottom,#03363d,#17494d)}
+.cert-card.prov-pearson::before{background:linear-gradient(to bottom,#007fa3,#00b398)}
+.cert-top{display:flex;align-items:flex-start;gap:16px;margin-bottom:16px}
+.cert-logo{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.72rem;color:#fff;flex-shrink:0;letter-spacing:.02em}
+.cert-logo.bg-ibm{background:linear-gradient(135deg,#0530ad,#4589ff)}
+.cert-logo.bg-google{background:linear-gradient(135deg,#4285f4,#34a853)}
+.cert-logo.bg-meta{background:linear-gradient(135deg,#0081fb,#00c2ff)}
+.cert-logo.bg-cisco{background:linear-gradient(135deg,#049fd9,#005073)}
+.cert-logo.bg-zendesk{background:linear-gradient(135deg,#03363d,#17494d)}
+.cert-logo.bg-pearson{background:linear-gradient(135deg,#007fa3,#00b398)}
+.cert-card h4{font-size:.95rem;font-weight:700;color:var(--dark);line-height:1.35;margin-bottom:2px}
+.cert-provider{font-size:.72rem;font-weight:600;color:var(--accent)}
+.cert-date{font-size:.68rem;color:var(--text-light);margin-top:2px}
+.cert-id{font-size:.65rem;color:var(--text-light);font-family:monospace;margin-top:2px}
+.cert-skills{display:flex;flex-wrap:wrap;gap:5px;margin-top:14px}
+.cert-skill{padding:4px 12px;border-radius:60px;font-size:.64rem;font-weight:600;background:var(--bg-alt);border:1px solid var(--border);color:var(--text-alt);white-space:nowrap;transition:all var(--t)}
+.cert-skill:hover{border-color:var(--accent);color:var(--accent);background:var(--peach-light)}
+.cert-creds{margin-bottom:48px}
+.cert-creds-title{font-size:.82rem;font-weight:700;color:var(--dark);text-transform:uppercase;letter-spacing:.1em;margin-bottom:18px}
+.cert-cred-list{display:flex;flex-wrap:wrap;gap:10px}
+.cert-cred{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:14px;background:#fff;border:1px solid var(--border);font-size:.78rem;font-weight:500;color:var(--text-alt);transition:all .4s var(--ease)}
+.cert-cred:hover{border-color:var(--border-h);background:var(--bg-alt)}
+.cert-cred .ico{width:16px;height:16px;color:var(--accent);flex-shrink:0}
+
+/* === BLOG === */
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px}
+.blog-card{background:#fff;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:all .5s var(--ease);display:flex;flex-direction:column}
+.blog-card:hover{border-color:var(--border-h);transform:translateY(-6px);box-shadow:0 20px 50px rgba(0,0,0,.07)}
+.blog-card-img{height:180px;position:relative;overflow:hidden}
+.blog-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.blog-card:hover .blog-card-img img{transform:scale(1.05)}
+.blog-card-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.12) 100%);pointer-events:none}
+.blog-card-body{padding:28px 28px 20px;flex:1;display:flex;flex-direction:column}
+.blog-badge{display:inline-flex;padding:5px 14px;border-radius:60px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px;width:fit-content}
+.blog-badge.b-wp{background:rgba(33,115,210,.08);color:#2173d2}
+.blog-badge.b-ghl{background:rgba(150,114,196,.08);color:var(--lavender-d)}
+.blog-badge.b-mig{background:rgba(212,168,67,.08);color:var(--gold-d)}
+.blog-badge.b-sq{background:rgba(238,70,120,.08);color:#ee4678}
+.blog-badge.b-ai{background:rgba(88,192,156,.08);color:var(--mint-d)}
+.blog-card h3{font-size:1rem;font-weight:700;color:var(--dark);line-height:1.4;margin-bottom:10px}
+.blog-card p{font-size:.84rem;color:var(--text);line-height:1.75;flex:1}
+.blog-card-foot{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;border-top:1px solid var(--border)}
+.blog-read{font-size:.74rem;color:var(--accent);font-weight:700;display:flex;align-items:center;gap:4px;transition:gap var(--t)}
+.blog-read:hover{gap:8px}
+.blog-time{font-size:.7rem;color:var(--text-light);font-weight:500}
+.blog-more-wrap{text-align:center;margin-top:48px}
+.blog-more{display:inline-flex;align-items:center;gap:8px;padding:14px 36px;border-radius:60px;font-size:.88rem;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--accent),var(--orange));border:none;cursor:pointer;transition:all var(--t) var(--ease);box-shadow:0 4px 16px var(--orange-glow)}
+.blog-more:hover{transform:translateY(-2px);box-shadow:0 8px 28px var(--orange-glow-s)}
+
+/* === TESTIMONIALS === */
+.test-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:28px}
+.test-grid .test-card:nth-child(4)::after{background:linear-gradient(90deg,var(--gold-d),#e8a040)}
+.test-grid .test-card:nth-child(5)::after{background:linear-gradient(90deg,var(--navy),var(--navy-light))}
+.test-card{padding:42px;border-radius:var(--radius);background:#fff;border:1px solid var(--border);position:relative;transition:all .5s var(--ease);overflow:hidden}
+.test-card:hover{border-color:var(--border-h);transform:translateY(-5px);box-shadow:0 16px 48px rgba(0,0,0,.06)}
+.test-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px}
+.test-card:nth-child(1)::after{background:linear-gradient(90deg,var(--accent),var(--orange))}
+.test-card:nth-child(2)::after{background:linear-gradient(90deg,var(--lavender-d),#c084fc)}
+.test-card:nth-child(3)::after{background:linear-gradient(90deg,var(--mint-d),var(--green))}
+.test-stars{color:#F59E0B;font-size:1rem;margin-bottom:22px;letter-spacing:3px}
+.test-text{font-size:.95rem;color:var(--text);line-height:1.9;margin-bottom:28px;font-style:italic}
+.test-author{display:flex;align-items:center;gap:14px}
+.test-av{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;color:#fff}
+.test-av .ico{width:22px;height:22px;stroke:#fff}
+.test-name{font-size:.88rem;font-weight:700;color:var(--dark)}
+.test-role{font-size:.76rem;color:var(--text-light)}
+.test-quote{position:absolute;top:20px;right:30px;font-size:5rem;color:rgba(0,0,0,.03);font-weight:900;line-height:1;font-family:Georgia,serif}
+
+/* === CTA === */
+.cta-sec{background:var(--navy);position:relative;overflow:hidden}
+.cta-sec::before{content:'';position:absolute;top:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(239,114,22,.15),transparent 65%)}
+.cta-sec::after{content:'';position:absolute;bottom:-150px;left:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(88,192,156,.08),transparent 65%)}
+.cta-box{text-align:center;position:relative;z-index:2;padding:100px 48px}
+.cta-box h2{font-size:clamp(1.8rem,3vw,2.8rem);font-weight:800;color:#fff;margin-bottom:18px;letter-spacing:-.03em}
+.cta-box p{font-size:1.08rem;color:rgba(255,255,255,.6);max-width:520px;margin:0 auto 44px;line-height:1.8}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.btn-white{background:#fff;color:var(--dark);box-shadow:0 6px 24px rgba(0,0,0,.1)}
+.btn-white:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.15)}
+.btn-ghost{background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.15);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.3);transform:translateY(-2px)}
+
+/* === FOOTER === */
+.footer{padding:50px 0;border-top:1px solid var(--border);text-align:center;background:#fff}
+.footer-name{font-size:1rem;font-weight:800;color:var(--dark);margin-bottom:6px}
+.footer-sub{font-size:.82rem;color:var(--text-light)}
+.footer-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 20px;border-radius:60px;background:var(--peach-light);border:1px solid rgba(239,114,22,.12);font-size:.72rem;font-weight:700;color:var(--accent);margin-top:20px}
+.footer-badge .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:pulse 2s ease infinite}
+
+/* === PREVIEW MODAL === */
+.pv-modal{display:none;position:fixed;inset:0;z-index:2000;background:rgba(25,25,31,.75);backdrop-filter:blur(12px);align-items:center;justify-content:center;padding:24px}
+.pv-modal.open{display:flex}
+.pv-inner{width:100%;max-width:1140px;height:86vh;background:#fff;border-radius:24px;border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column;animation:modalPop .35s var(--ease)}
+@keyframes modalPop{from{opacity:0;transform:scale(.94) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.pv-head{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;border-bottom:1px solid var(--border);background:var(--bg-alt)}
+.pv-url{display:flex;align-items:center;gap:8px;padding:8px 16px;border-radius:8px;background:#fff;font-size:.8rem;color:var(--text);border:1px solid var(--border);flex:1;max-width:500px}
+.pv-url-dot{width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.pv-acts{display:flex;gap:8px}
+.pv-btn{padding:9px 20px;border-radius:10px;font-size:.82rem;font-weight:600;border:1px solid var(--border);background:#fff;color:var(--text);cursor:pointer;transition:var(--t)}
+.pv-btn:hover{border-color:var(--accent);color:var(--accent)}
+.pv-btn.cl{background:rgba(238,70,25,.06);border-color:rgba(238,70,25,.15);color:var(--accent)}.pv-btn.cl:hover{background:rgba(238,70,25,.12)}
+.pv-iframe{flex:1;overflow:auto;position:relative;background:#fff}
+.pv-iframe img{width:100%;display:block}
+.pv-loader{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#fff;font-size:.88rem;color:var(--text-light);z-index:2}
+.pv-loader.hidden{display:none}
+.pv-info{padding:12px 24px;border-top:1px solid var(--border);font-size:.74rem;color:var(--text-light);display:flex;justify-content:space-between;background:var(--bg-alt)}
+
+/* === SCROLL REVEAL === */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s ease}.rv.vis{opacity:1;transform:translateY(0)}
+.rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}.rv-d4{transition-delay:.4s}
+.rv-scale{opacity:0;transform:scale(.92);transition:opacity .7s ease,transform .7s ease}.rv-scale.vis{opacity:1;transform:scale(1)}
+.rv-left{opacity:0;transform:translateX(-40px);transition:opacity .7s ease,transform .7s ease}.rv-left.vis{opacity:1;transform:translateX(0)}
+.rv-right{opacity:0;transform:translateX(40px);transition:opacity .7s ease,transform .7s ease}.rv-right.vis{opacity:1;transform:translateX(0)}
+
+/* Marquee for trusted bar */
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.marquee-track{display:flex;animation:marquee 25s linear infinite;gap:60px;width:max-content}
+
+/* === RESPONSIVE === */
+@media(max-width:1024px){.hero-inner{grid-template-columns:1fr}.hero-visual{display:none}}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr;gap:44px}.about-card{max-width:450px;margin:0 auto}.port-grid,.ts-grid,.tp-grid,.blog-grid,.cert-grid{grid-template-columns:1fr}.test-grid{grid-template-columns:1fr}}
+@media(max-width:768px){.nav-links,.nav-cta{display:none}.mobile-toggle{display:flex}.hero-stats{gap:28px}.stat-n{font-size:1.8rem}.sec-pad{padding:80px 0}.tech-item{width:110px;padding:22px 16px}.trusted-logos{gap:24px}.trusted-logo{font-size:.9rem}.flip-front .flip-hint{display:none}.pv-inner{max-width:100%;height:100vh;border-radius:0}.pv-head{flex-wrap:wrap;gap:10px}.pv-url{max-width:100%;min-width:0}.pv-acts{width:100%;justify-content:flex-end}}
+@media(max-width:480px){.hero-stats{flex-wrap:wrap;gap:18px}.hero-btns{flex-direction:column}.btn{justify-content:center}.about-chips{grid-template-columns:1fr}.port-tabs{gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px}.port-tab{padding:9px 16px;font-size:.74rem;white-space:nowrap}.port-grid,.ts-grid,.tp-grid,.blog-grid,.cert-grid{grid-template-columns:1fr}.ts-grid,.tp-grid{grid-template-columns:1fr !important}.cta-box{padding:60px 20px}.cert-card{padding:22px}.cert-cred{padding:8px 14px;font-size:.72rem}.cert-cred-list{gap:6px}.trusted-logos{gap:16px;flex-direction:column}.trusted-logo::before{display:none}.flip-title{pointer-events:none}.flip-back{display:none}.sec-title{font-size:1.6rem}.sec-desc{font-size:.92rem}.container{padding:0 16px}.test-card{padding:28px}.tech-wrap{gap:10px}.tech-item{width:90px;padding:18px 12px}.tech-nm{font-size:.66rem}.tech-ico{width:44px;height:44px;font-size:1rem}.ts-card{padding:22px}.tp-card{padding:22px}.pv-modal{padding:0}.footer-sub{font-size:.74rem}}
+</style>
+</head>
+<body>
+
+<!-- SVG ICON SPRITE -->
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-heartpulse" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-2 2 4 1.5-3 1.5 1h5.27"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M12 6h.01"/><path d="M12 10h.01"/><path d="M12 14h.01"/><path d="M16 10h.01"/><path d="M16 14h.01"/><path d="M8 10h.01"/><path d="M8 14h.01"/></symbol>
+  <symbol id="i-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14h2"/><path d="m8 7.5-3-3-.37 1.5A8.67 8.67 0 0 0 5 10.28"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2"/><path d="M12 18h.01"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+  <symbol id="i-tool" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></symbol>
+  <symbol id="i-server" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/><path d="M8 7h6"/><path d="M8 11h8"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="currentColor"/><circle cx="17.5" cy="10.5" r=".5" fill="currentColor"/><circle cx="8.5" cy="7.5" r=".5" fill="currentColor"/><circle cx="6.5" cy="12.5" r=".5" fill="currentColor"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2Z"/></symbol>
+  <symbol id="i-clipboard" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-rocket" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09Z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2Z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol>
+  <symbol id="i-layout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol>
+  <symbol id="i-crane" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/><path d="M17 18h1"/><path d="M12 18h1"/><path d="M7 18h1"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+</svg>
+
+<!-- PAGE LOADER -->
+<div class="page-loader" id="pageLoader"><span class="loader-dot"></span><span class="loader-dot"></span><span class="loader-dot"></span></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo"><div class="nav-logo-mark">SK</div>Salim Kibet</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#portfolio">Projects</a>
+      <a href="#troubleshoot">Support Work</a>
+      <a href="#techstack">Stack</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#certifications">Certs</a>
+      <a href="blog.html">Blog</a>
+    </div>
+    <a href="https://www.upwork.com/services/product/development-it-salim-1960377410071263504?ref=project_share" target="_blank" rel="noopener" class="nav-cta">Let's Talk</a>
+    <button class="mobile-toggle" id="mobToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobMenu">
+  <a href="#about" onclick="closeMob()">About</a>
+  <a href="#portfolio" onclick="closeMob()">Projects</a>
+  <a href="#troubleshoot" onclick="closeMob()">Support Work</a>
+  <a href="#techstack" onclick="closeMob()">Stack</a>
+  <a href="#testimonials" onclick="closeMob()">Reviews</a>
+  <a href="#certifications" onclick="closeMob()">Certs</a>
+  <a href="blog.html" onclick="closeMob()">Blog</a>
+  <a href="#cta" onclick="closeMob()">Let's Talk</a>
+</div>
+
+<!-- PREVIEW MODAL -->
+<div class="pv-modal" id="pvModal">
+  <div class="pv-inner">
+    <div class="pv-head">
+      <div class="pv-url"><span class="pv-url-dot"></span><span id="pvUrl">loading…</span></div>
+      <div class="pv-acts">
+        <a class="pv-btn" id="pvVisit" href="#" target="_blank" rel="noopener">Visit Site ↗</a>
+        <button class="pv-btn cl" onclick="closePv()">✕ Close</button>
+      </div>
+    </div>
+    <div class="pv-iframe">
+      <div class="pv-loader" id="pvLoad">Loading preview…</div>
+      <img id="pvFrame" alt="Site preview" src="">
+    </div>
+    <div class="pv-info"><span id="pvInfo">Preview</span><span>Some sites block iframe embedding — use "Visit Site" for full access</span></div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-orb1"></div>
+    <div class="hero-bg-orb2"></div>
+    <div class="hero-bg-orb3"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-tag"><span class="hero-tag-dot"></span>Available for New Projects</div>
+        <h1>Freelance <em>WordPress Developer</em><br>&amp; IT Support Specialist<br>in <em>Toronto, Canada</em></h1>
+        <p class="hero-desc">I build, fix, and scale WordPress websites, GoHighLevel funnels, and custom web solutions for businesses across Canada, USA, UK, Australia, and 10+ countries. 8+ years of experience. 100+ projects delivered.</p>
+        <div class="hero-stats">
+          <div class="stat-item"><div class="stat-n"><span data-count="8">0</span>+</div><div class="stat-l">Years Experience</div></div>
+          <div class="stat-item"><div class="stat-n"><span data-count="100">0</span>+</div><div class="stat-l">Projects Delivered</div></div>
+          <div class="stat-item"><div class="stat-n"><span data-count="10">0</span>+</div><div class="stat-l">Countries</div></div>
+        </div>
+        <div class="hero-btns">
+          <a href="#portfolio" class="btn btn-p">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            View Projects
+          </a>
+          <a href="https://www.upwork.com/services/product/development-it-salim-1960377410071263504?ref=project_share" target="_blank" rel="noopener" class="btn btn-s">Let's Work Together →</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="browser-frame">
+          <div class="browser-bar">
+            <span class="browser-dot" style="background:#ff5f57"></span>
+            <span class="browser-dot" style="background:#febc2e"></span>
+            <span class="browser-dot" style="background:#28c840"></span>
+            <div class="browser-url">upwork.com/freelancers/salimc</div>
+          </div>
+          <div class="browser-body">
+            <div class="uw-profile">
+              <div class="uw-header">
+                <div class="uw-avatar"><img src="salim.jpg" alt="Salim C."></div>
+                <div>
+                  <div class="uw-name">Salim C. <span class="uw-verified"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span></div>
+                  <div class="uw-loc">Toronto, Canada</div>
+                  <div class="uw-badges">
+                    <span class="uw-badge success">&#10003; 100% Job Success</span>
+                    <span class="uw-badge top">&#9734; Top Rated</span>
+                  </div>
+                </div>
+              </div>
+              <div class="uw-title">WordPress &amp; Web Solutions Expert | IT Support | Custom App &amp; AI Expert</div>
+              <div class="uw-stats">
+                <div><div class="uw-stat-n">$10K+</div><div class="uw-stat-l">Total Earnings</div></div>
+                <div><div class="uw-stat-n">46</div><div class="uw-stat-l">Total Jobs</div></div>
+                <div><div class="uw-stat-n">880</div><div class="uw-stat-l">Total Hours</div></div>
+              </div>
+              <div class="uw-rate">
+                <div class="uw-rate-amount">$20.00/hr</div>
+                <div class="uw-rate-label">Hourly Rate</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUSTED -->
+<div class="trusted rv">
+  <div class="container">
+    <div class="trusted-inner">
+      <div class="trusted-label">Trusted by businesses in 5+ countries</div>
+      <div style="overflow:hidden">
+        <div class="marquee-track">
+          <span class="trusted-logo">Men In Kilts</span>
+          <span class="trusted-logo">Main Street PT</span>
+          <span class="trusted-logo">SynLawn Australia</span>
+          <span class="trusted-logo">ByPress</span>
+          <span class="trusted-logo">Dr. Alora</span>
+          <span class="trusted-logo">UStoreIt</span>
+          <span class="trusted-logo">HairGuard</span>
+          <span class="trusted-logo">Men In Kilts</span>
+          <span class="trusted-logo">Main Street PT</span>
+          <span class="trusted-logo">SynLawn Australia</span>
+          <span class="trusted-logo">ByPress</span>
+          <span class="trusted-logo">Dr. Alora</span>
+          <span class="trusted-logo">UStoreIt</span>
+          <span class="trusted-logo">HairGuard</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="sec-pad" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="rv-left rv">
+        <div class="about-card">
+          <div class="about-avatar"><img src="salim.jpg" alt="Salim Kibet Cheptoek"></div>
+          <div class="about-name">Salim Kibet Cheptoek</div>
+          <div class="about-title-card">Full-Stack Developer &amp; IT Specialist</div>
+          <div class="about-badges">
+            <span class="about-badge"><svg class="ico"><use href="#i-trophy"/></svg> Top Rated Freelancer</span>
+            <span class="about-badge"><svg class="ico"><use href="#i-pin"/></svg> Toronto, Canada</span>
+            <span class="about-badge">8+ Years Experience</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-text rv-right rv">
+        <div class="sec-tag">About Me</div>
+        <h3>Turning ideas into production-grade websites since 2017</h3>
+        <p>I'm <strong>Salim Kibet Cheptoek</strong> — a freelance web developer and IT specialist based in Toronto, Canada. With over 8 years in the field, I've shipped websites and platforms for clients across <strong>Canada, USA, Australia, Ireland, UK, Kenya, and more</strong>.</p>
+        <p>From WordPress and WooCommerce builds to Webflow, Wix, GoHighLevel migrations, and custom PHP/JS development — I handle full builds, emergency fixes, platform migrations, and ongoing IT support.</p>
+        <div class="about-chips">
+          <div class="about-chip rv rv-d1"><div class="about-chip-n">8+</div><div class="about-chip-l">Years in the field</div></div>
+          <div class="about-chip rv rv-d2"><div class="about-chip-n">10+</div><div class="about-chip-l">Countries served</div></div>
+          <div class="about-chip rv rv-d3"><div class="about-chip-n">100+</div><div class="about-chip-l">Projects shipped</div></div>
+          <div class="about-chip rv rv-d4"><div class="about-chip-n">Top</div><div class="about-chip-l">Rated Freelancer</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="sec-pad portfolio-sec" id="portfolio">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="sec-tag">Portfolio</div>
+      <div class="flip-title" id="flipTitle" onclick="this.classList.toggle('flipped')">
+        <div class="flip-title-inner">
+          <div class="flip-front">
+            <h2 class="sec-title">Projects I've Built</h2>
+            <span class="flip-hint">click to flip</span>
+          </div>
+          <div class="flip-back">
+            <span class="fb-label">Built with:</span>
+            <span class="fb-tag">WordPress</span>
+            <span class="fb-tag">WooCommerce</span>
+            <span class="fb-tag">Elementor</span>
+            <span class="fb-tag">PHP</span>
+            <span class="fb-tag">ACF</span>
+            <span class="fb-tag">JavaScript</span>
+            <span class="fb-tag">React</span>
+            <span class="fb-tag">Python</span>
+            <span class="fb-tag">MySQL</span>
+            <span class="fb-tag">REST API</span>
+            <span class="fb-tag">HTML / CSS</span>
+            <span class="fb-tag">Cloudflare</span>
+            <span class="fb-tag">cPanel</span>
+            <span class="fb-tag">Google Workspace</span>
+            <span class="fb-tag">M-Pesa</span>
+            <span class="fb-tag">Flutter</span>
+          </div>
+        </div>
+      </div>
+      <p class="sec-desc">Full-scale websites, e-commerce stores, SaaS products, and mobile apps — each built for performance and conversion. Click any card to preview.</p>
+    </div>
+
+    <div class="port-tabs rv" id="portTabs">
+      <button class="port-tab active" data-filter="all">All Projects</button>
+      <button class="port-tab" data-filter="services">Local Services</button>
+      <button class="port-tab" data-filter="health">Health &amp; Wellness</button>
+      <button class="port-tab" data-filter="ecommerce">E-commerce</button>
+      <button class="port-tab" data-filter="tech">Tech &amp; SaaS</button>
+      <button class="port-tab" data-filter="corporate">Corporate</button>
+      <button class="port-tab" data-filter="nonprofit">Nonprofit</button>
+      <button class="port-tab" data-filter="mobile">Mobile Apps</button>
+    </div>
+
+    <div class="port-grid" id="portGrid">
+
+      <div class="port-card rv" data-category="tech" onclick="openPv('https://section2.com','Section2')">
+        <div class="port-preview"><div class="port-gradient g-navy"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">section2.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fsection2.com?w=600" alt="section2.com website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-tech"><svg class="ico"><use href="#i-bolt"/></svg> Tech &amp; SaaS</span><h3>Section2 <span class="arr">↗</span></h3><p>Custom WordPress development using ACF &amp; PHP — performance-tuned architecture with custom post types, field groups, and dynamic templating.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Global</span><a href="https://section2.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d1" data-category="services" onclick="openPv('https://garagedoordoctorcanada.com','Garage Door Doctor')">
+        <div class="port-preview"><div class="port-gradient g-peach"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">garagedoordoctorcanada.com</span></div><div class="port-browser-body has-img"><img src="Expert-Garage-Door-Repair-Vancouver-Island-Garage-Door-Doctor-04-15-2026_08_25_PM.png" alt="Garage Door Doctor Canada website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-service"><svg class="ico"><use href="#i-wrench"/></svg> Local Services</span><h3>Garage Door Doctor Canada <span class="arr">↗</span></h3><p>WooCommerce-based service and lead generation website. Service catalog, quote requests, online scheduling, and local SEO optimization.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Canada</span><a href="https://garagedoordoctorcanada.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d2" data-category="tech" onclick="openPv('https://jobsmartai.net','JobSmartAI')">
+        <div class="port-preview"><div class="port-gradient g-lavender"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">jobsmartai.net</span></div><div class="port-browser-body has-img"><img src="JobSmartAI-Automated-Job-Application-Assistant-JobSmartAI-04-15-2026_08_25_PM.png" alt="jobsmartai.net website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-tech"><svg class="ico"><use href="#i-bolt"/></svg> Tech &amp; SaaS</span><h3>JobSmartAI <span class="arr">↗</span></h3><p>AI-powered job matching platform with admin dashboards, application tracking, resume optimization, and analytics — full SaaS product build.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Global</span><a href="https://jobsmartai.net" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="nonprofit" onclick="openPv('https://glowsisterhub.org','GlowSister Hub')">
+        <div class="port-preview"><div class="port-gradient g-peach"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">glowsisterhub.org</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fglowsisterhub.org?w=600" alt="glowsisterhub.org website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-nonprofit"><svg class="ico"><use href="#i-handshake"/></svg> Nonprofit</span><h3>GlowSister Hub <span class="arr">↗</span></h3><p>Nonprofit community platform — events calendar, volunteer registration, donation integration, and community impact tracking.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Toronto, Canada</span><a href="https://glowsisterhub.org" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d1" data-category="health" onclick="openPv('https://livingoptimallytherapy.com','Living Optimally Therapy')">
+        <div class="port-preview"><div class="port-gradient g-lavender"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">livingoptimallytherapy.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Flivingoptimallytherapy.com?w=600" alt="livingoptimallytherapy.com website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-health"><svg class="ico"><use href="#i-heartpulse"/></svg> Health &amp; Wellness</span><h3>Living Optimally Therapy <span class="arr">↗</span></h3><p>Secure healthcare website with client portal integration — therapist profiles, session booking, intake forms, and privacy-compliant architecture.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Canada</span><a href="https://livingoptimallytherapy.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d2" data-category="health" onclick="openPv('https://xavierfitness.net','Xavier Fitness')">
+        <div class="port-preview"><div class="port-gradient g-peach"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">xavierfitness.net</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fxavierfitness.net?w=600" alt="xavierfitness.net website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-health"><svg class="ico"><use href="#i-heartpulse"/></svg> Health &amp; Wellness</span><h3>Xavier Fitness <span class="arr">↗</span></h3><p>Personal trainer service site — workout programs, client transformations, pricing tiers, and session booking integration.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> USA</span><a href="https://xavierfitness.net" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="services" onclick="openPv('https://meninkilts.com','Men In Kilts')">
+        <div class="port-preview"><div class="port-gradient g-mint"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">meninkilts.com</span></div><div class="port-browser-body has-img"><img src="https://transform.octanecdn.com/crop/800x800/https://octanecdn.com/meninkiltscom/meninkiltscom_697762748.jpg" alt="Men In Kilts website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-service"><svg class="ico"><use href="#i-wrench"/></svg> Local Services</span><h3>Men In Kilts <span class="arr">↗</span></h3><p>Multi-location home services franchise — window cleaning, pressure washing, gutter cleaning across Canada &amp; USA. Franchise-scale site architecture with location finders and booking.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Canada &amp; USA</span><a href="https://meninkilts.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d1" data-category="services" onclick="openPv('https://dustingbirds.ca','Dusting Birds')">
+        <div class="port-preview"><div class="port-gradient g-gold"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">dustingbirds.ca</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fdustingbirds.ca?w=600" alt="dustingbirds.ca website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-service"><svg class="ico"><use href="#i-wrench"/></svg> Local Services</span><h3>Dusting Birds <span class="arr">↗</span></h3><p>SEO-focused business website with lead generation forms, service pages, and Google-optimized content strategy driving organic traffic growth.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Canada</span><a href="https://dustingbirds.ca" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d2" data-category="health" onclick="openPv('https://mainstreetpt.net','Main Street PT')">
+        <div class="port-preview"><div class="port-gradient g-mint"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">mainstreetpt.net</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fmainstreetpt.net?w=600" alt="mainstreetpt.net website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-health"><svg class="ico"><use href="#i-heartpulse"/></svg> Health &amp; Wellness</span><h3>Main Street Physical Therapy <span class="arr">↗</span></h3><p>Physical therapy clinic with ongoing IT support, email systems, and telehealth troubleshooting. Appointment scheduling and patient resource portal.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> USA</span><a href="https://mainstreetpt.net" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="health" onclick="openPv('https://msptdevices.net','MSPT Devices')">
+        <div class="port-preview"><div class="port-gradient g-sky"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">msptdevices.net</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fmsptdevices.net?w=600" alt="msptdevices.net website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-health"><svg class="ico"><use href="#i-heartpulse"/></svg> Health &amp; Wellness</span><h3>MSPT Devices <span class="arr">↗</span></h3><p>Medical/PT devices company — product catalog, technical specifications, ordering system, and healthcare-compliance design patterns.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> USA</span><a href="https://msptdevices.net" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d1" data-category="health" onclick="openPv('https://savecares.com','SaveCares')">
+        <div class="port-preview"><div class="port-gradient g-gold"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">savecares.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fsavecares.com?w=600" alt="savecares.com website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-health"><svg class="ico"><use href="#i-heartpulse"/></svg> Health &amp; Wellness</span><h3>SaveCares <span class="arr">↗</span></h3><p>Healthcare services platform — program listings, care team profiles, appointment scheduling, and patient resource center.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Global</span><a href="https://savecares.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d2" data-category="ecommerce" onclick="openPv('https://dralora.com','Dr. Alora')">
+        <div class="port-preview"><div class="port-gradient g-orange"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">dralora.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fdralora.com?w=600" alt="dralora.com website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-ecommerce"><svg class="ico"><use href="#i-bag"/></svg> E-commerce</span><h3>Dr. Alora Skincare <span class="arr">↗</span></h3><p>Full e-commerce skincare platform — WooCommerce, M-Pesa mobile money integration, multi-currency support, inventory management and optimized checkout.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Kenya</span><a href="https://dralora.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="ecommerce" onclick="openPv('https://ustoreit.ca','UStoreIt')">
+        <div class="port-preview"><div class="port-gradient g-peach"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">ustoreit.ca</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fustoreit.ca?w=600" alt="ustoreit.ca website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-ecommerce"><svg class="ico"><use href="#i-bag"/></svg> E-commerce</span><h3>UStoreIt Self-Storage <span class="arr">↗</span></h3><p>Multi-location self-storage — Edmonton, Red Deer, St. Albert, Calgary. Location finder, unit calculator, and online reservation system.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Alberta, Canada</span><a href="https://ustoreit.ca" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d1" data-category="tech" onclick="openPv('https://simplykinetics.com','SimplyKinetics')">
+        <div class="port-preview"><div class="port-gradient g-mint"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">simplykinetics.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fsimplykinetics.com?w=600" alt="simplykinetics.com website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-tech"><svg class="ico"><use href="#i-bolt"/></svg> Tech &amp; SaaS</span><h3>SimplyKinetics <span class="arr">↗</span></h3><p>App-connected fitness platform with privacy compliance and backend integration — cross-platform app showcase (Android + iOS).</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Global</span><a href="https://simplykinetics.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d2" data-category="tech" onclick="openPv('https://trucks.xavierfitness.com','Logistics System')">
+        <div class="port-preview"><div class="port-gradient g-gold"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">trucks.xavierfitness.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Ftrucks.xavierfitness.com?w=600" alt="trucks.xavierfitness.com website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-tech"><svg class="ico"><use href="#i-bolt"/></svg> Tech &amp; SaaS</span><h3>Logistics &amp; Delivery System <span class="arr">↗</span></h3><p>Logistics and delivery management system — fleet tracking, route optimization, driver assignments, and real-time delivery status dashboards.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Global</span><a href="https://trucks.xavierfitness.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="corporate" onclick="openPv('https://uscksa.com','USC KSA')">
+        <div class="port-preview"><div class="port-gradient g-lavender"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">uscksa.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fuscksa.com?w=600" alt="uscksa.com website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-corporate"><svg class="ico"><use href="#i-building"/></svg> Corporate</span><h3>USC KSA — Manpower Solutions <span class="arr">↗</span></h3><p>Corporate website for manpower and staffing solutions — professional services, client portal, and recruitment pipeline features.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Saudi Arabia</span><a href="https://uscksa.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d1" data-category="mobile">
+        <div class="port-preview"><div class="port-gradient g-orange"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">ResQ Pwani — Google Play</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fplay.google.com/store/apps?w=600" alt="ResQ Pwani app" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-mobile"><svg class="ico"><use href="#i-phone"/></svg> Mobile App</span><h3>ResQ Pwani <span class="arr">↗</span></h3><p>Disaster response mobile platform on Google Play — real-time alerts, GPS reporting, admin dashboard, and emergency coordination for coastal Kenya.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Kenya</span><a href="https://play.google.com/store" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Google Play →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d2" data-category="services" onclick="openPv('https://justingatbonton.com','Justin Gatbonton')">
+        <div class="port-preview"><div class="port-gradient g-mint"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">justingatbonton.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fjustingatbonton.com?w=600" alt="Justin Gatbonton website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-service"><svg class="ico"><use href="#i-trophy"/></svg> Sports &amp; Personal</span><h3>Justin Gatbonton <span class="arr">↗</span></h3><p>Professional athlete portfolio for OPDL soccer midfielder — bio, highlights gallery, testimonials, and contact. Built with WordPress &amp; Elementor Pro.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Canada</span><a href="https://justingatbonton.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="ecommerce" onclick="openPv('https://wedgehutfoods.co.ke','Wedgehut Foods')">
+        <div class="port-preview"><div class="port-gradient g-gold"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">wedgehutfoods.co.ke</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fwedgehutfoods.co.ke?w=600" alt="Wedgehut Foods website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-ecommerce"><svg class="ico"><use href="#i-bag"/></svg> E-commerce</span><h3>Wedgehut Foods <span class="arr">↗</span></h3><p>Product showcase and e-commerce website for a potato products company — online catalog, order system, and brand identity.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Kenya</span><a href="https://wedgehutfoods.co.ke" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d1" data-category="corporate" onclick="openPv('https://gateway-commodities.com','Gateway Commodities')">
+        <div class="port-preview"><div class="port-gradient g-navy"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">gateway-commodities.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fgateway-commodities.com?w=600" alt="Gateway Commodities website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-corporate"><svg class="ico"><use href="#i-building"/></svg> Corporate</span><h3>Gateway Commodities <span class="arr">↗</span></h3><p>Corporate website for steel, building materials, and petrochemical commodities — product catalog, company profile, and inquiry system.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Global</span><a href="https://gateway-commodities.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d2" data-category="corporate" onclick="openPv('https://maraconcrete.co.ke','Mara Concrete')">
+        <div class="port-preview"><div class="port-gradient g-peach"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">maraconcrete.co.ke</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fmaraconcrete.co.ke?w=600" alt="Mara Concrete website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-corporate"><svg class="ico"><use href="#i-building"/></svg> Corporate</span><h3>Mara Concrete Ltd <span class="arr">↗</span></h3><p>Construction materials company website — premium aggregates, paving blocks, masonry, precast products, and roof tiles with full product catalog.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Kenya</span><a href="https://maraconcrete.co.ke" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="services" onclick="openPv('https://snapsipstation.ca','SnapSip Station')">
+        <div class="port-preview"><div class="port-gradient g-lavender"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">snapsipstation.ca</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fsnapsipstation.ca?w=600" alt="SnapSip Station website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-service"><svg class="ico"><use href="#i-palette"/></svg> Event Services</span><h3>SnapSip Station <span class="arr">↗</span></h3><p>Event photobooth services website — booking system, gallery showcase, service packages, and event-based landing pages for Canadian market.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Canada</span><a href="https://snapsipstation.ca" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d1" data-category="services" onclick="openPv('https://trtmovers.ca','TRT Movers')">
+        <div class="port-preview"><div class="port-gradient g-sky"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">trtmovers.ca</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Ftrtmovers.ca?w=600" alt="TRT Movers website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-service"><svg class="ico"><use href="#i-truck"/></svg> Local Services</span><h3>TRT Movers <span class="arr">↗</span></h3><p>Moving services business website — online quote calculator, service areas, booking system, and customer reviews for Canadian moving company.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-pin"/></svg> Canada</span><a href="https://trtmovers.ca" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv rv-d2" data-category="health" onclick="openPv('https://youarenotlosingit.com','YANLI')">
+        <div class="port-preview"><div class="port-gradient g-mint"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">youarenotlosingit.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fyouarenotlosingit.com?w=600" alt="YANLI coaching website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-health"><svg class="ico"><use href="#i-heartpulse"/></svg> Health &amp; Wellness</span><h3>YANLI — Online Coaching <span class="arr">↗</span></h3><p>Online coaching and wellness platform — course enrollment, client resources, booking system, and motivational content hub.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Global</span><a href="https://youarenotlosingit.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="tech" onclick="openPv('https://profrenchcampus.com','ProFrench Campus')">
+        <div class="port-preview"><div class="port-gradient g-lavender"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">profrenchcampus.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fprofrenchcampus.com?w=600" alt="ProFrench Campus website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-tech"><svg class="ico"><use href="#i-book"/></svg> Education</span><h3>ProFrench Campus <span class="arr">↗</span></h3><p>Online language learning platform — course catalog, student enrollment, progress tracking, and LMS integration for French education.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Global</span><a href="https://profrenchcampus.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TROUBLESHOOT -->
+<section class="sec-pad" id="troubleshoot">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="sec-tag">Support &amp; Troubleshooting</div>
+      <h2 class="sec-title">WordPress Troubleshooting &amp; IT Support Services</h2>
+      <p class="sec-desc">Emergency fixes, crash recoveries, platform migrations, performance optimizations — here's a breakdown of problems I solved and how.</p>
+    </div>
+
+    <div class="ts-grid">
+
+      <div class="ts-card rv">
+        <div class="ts-top"><div class="ts-icon ico-fix"><svg class="ico"><use href="#i-tool"/></svg></div><div><h4><a href="https://impactsocal.com" target="_blank" rel="noopener">impactsocal.com</a></h4><div class="ts-subtitle">WordPress Fatal Error Fix</div></div></div>
+        <p class="ts-detail">Nonprofit site completely down. Diagnosed deprecated widget code and identified 3 conflicting plugins causing fatal PHP errors. Deactivated conflicts, patched widget code, restored full access — completed same evening in ~3 hours. Client tipped.</p>
+        <div class="ts-tags"><span class="ts-tag">WordPress</span><span class="ts-tag">PHP Debug</span><span class="ts-tag">Plugin Conflicts</span><span class="ts-tag"><svg class="ico"><use href="#i-pin"/></svg> USA</span></div>
+      </div>
+
+      <div class="ts-card rv rv-d1">
+        <div class="ts-top"><div class="ts-icon ico-server"><svg class="ico"><use href="#i-server"/></svg></div><div><h4><a href="https://synlawn.leadagency.com.au" target="_blank" rel="noopener">synlawn.leadagency.com.au</a></h4><div class="ts-subtitle">WordPress Multisite ACF Pro Customisation</div></div></div>
+        <p class="ts-detail">Removed Yoast SEO causing conflicts, fixed broken filters, video embeds, phone number display, and admin bar issues across a WordPress Multisite network. Required FTP access and Multisite Super Admin privileges.</p>
+        <div class="ts-tags"><span class="ts-tag">WordPress Multisite</span><span class="ts-tag">ACF Pro</span><span class="ts-tag">FTP</span><span class="ts-tag"><svg class="ico"><use href="#i-pin"/></svg> Australia</span></div>
+      </div>
+
+      <div class="ts-card rv rv-d2">
+        <div class="ts-top"><div class="ts-icon ico-server"><svg class="ico"><use href="#i-book"/></svg></div><div><h4><a href="https://lab.learnadv.com" target="_blank" rel="noopener">lab.learnadv.com</a></h4><div class="ts-subtitle">Moodle 5.1 Crash Recovery</div></div></div>
+        <p class="ts-detail">JetBackup restore broke the subdomain and crashed the entire LMS. Recovered 16–17 courses and 100+ active users. Fixed broken login system, restored plugins, corrected file permissions — ~8 hours of deep recovery work. Client tipped and offered follow-up contract.</p>
+        <div class="ts-tags"><span class="ts-tag">Moodle</span><span class="ts-tag">LMS Recovery</span><span class="ts-tag">JetBackup</span><span class="ts-tag">Server Admin</span></div>
+      </div>
+
+      <div class="ts-card rv">
+        <div class="ts-top"><div class="ts-icon ico-design"><svg class="ico"><use href="#i-palette"/></svg></div><div><h4><a href="https://bypress.ie" target="_blank" rel="noopener">bypress.ie</a></h4><div class="ts-subtitle">Squarespace Full Revamp</div></div></div>
+        <p class="ts-detail">Restructured entire site around 4 core services. Fixed broken navigation links, improved mobile layout and responsiveness, updated color scheme and typography. Client offered follow-on work after delivery.</p>
+        <div class="ts-tags"><span class="ts-tag">Squarespace</span><span class="ts-tag">Redesign</span><span class="ts-tag">Mobile UX</span><span class="ts-tag"><svg class="ico"><use href="#i-pin"/></svg> Ireland</span></div>
+      </div>
+
+      <div class="ts-card rv rv-d1">
+        <div class="ts-top"><div class="ts-icon ico-fix"><svg class="ico"><use href="#i-clipboard"/></svg></div><div><h4><a href="https://settlement-solutions.com.au" target="_blank" rel="noopener">settlement-solutions.com.au</a></h4><div class="ts-subtitle">WordPress Updates + Google Business Profile</div></div></div>
+        <p class="ts-detail">Flipbox project card updates, full Google Business Profile setup and verification, and analytics reporting configuration. SEO-ready content updates for Australian local search. 5-star review received.</p>
+        <div class="ts-tags"><span class="ts-tag">WordPress</span><span class="ts-tag">GBP Setup</span><span class="ts-tag">Analytics</span><span class="ts-tag"><svg class="ico"><use href="#i-pin"/></svg> Australia</span></div>
+      </div>
+
+      <div class="ts-card rv rv-d2">
+        <div class="ts-top"><div class="ts-icon ico-email"><svg class="ico"><use href="#i-mail"/></svg></div><div><h4>Google Workspace &amp; Email Deliverability</h4><div class="ts-subtitle">Multi-Brand Email Configuration</div></div></div>
+        <p class="ts-detail">Configured MX, SPF, DKIM, and DMARC records across 3 separate business domains. Created professional email accounts with full deliverability testing via Zoom. Repeat client engagement.</p>
+        <div class="ts-tags"><span class="ts-tag">Google Workspace</span><span class="ts-tag">DNS Records</span><span class="ts-tag">DKIM/DMARC</span><span class="ts-tag">Email Auth</span></div>
+      </div>
+
+      <div class="ts-card rv">
+        <div class="ts-top"><div class="ts-icon ico-perf"><svg class="ico"><use href="#i-rocket"/></svg></div><div><h4><a href="https://metaleaglechess.com" target="_blank" rel="noopener">metaleaglechess.com</a></h4><div class="ts-subtitle">WordPress Bug Fix + Performance</div></div></div>
+        <p class="ts-detail">Resolved Elementor layout breaks, ACF field display issues, and slow page loads. Built alternative homepage for A/B testing. Optimized Core Web Vitals and reduced load time. Approved same day.</p>
+        <div class="ts-tags"><span class="ts-tag">WordPress</span><span class="ts-tag">Elementor</span><span class="ts-tag">Performance</span><span class="ts-tag">ACF</span></div>
+      </div>
+
+      <div class="ts-card rv rv-d1">
+        <div class="ts-top"><div class="ts-icon ico-design"><svg class="ico"><use href="#i-layout"/></svg></div><div><h4><a href="https://healthendeavors.com" target="_blank" rel="noopener">healthendeavors.com</a></h4><div class="ts-subtitle">WordPress Page Build from PDF</div></div></div>
+        <p class="ts-detail">Pixel-perfect implementation of a Summit landing page from a 27MB PDF design mockup. Converted complex design deliverables into a fully responsive WordPress page hosted on GoDaddy.</p>
+        <div class="ts-tags"><span class="ts-tag">WordPress</span><span class="ts-tag">Design-to-Code</span><span class="ts-tag">GoDaddy</span></div>
+      </div>
+
+      <div class="ts-card rv rv-d2">
+        <div class="ts-top"><div class="ts-icon ico-fix"><svg class="ico"><use href="#i-shield"/></svg></div><div><h4><a href="https://authorlaurabriggs.com" target="_blank" rel="noopener">authorlaurabriggs.com</a></h4><div class="ts-subtitle">Squarespace DNS/SSL Fix</div></div></div>
+        <p class="ts-detail">Diagnosed Cisco Umbrella false positive blocking SSL certificate provisioning and preventing HTTPS access. Resolved domain configuration issues and recommended WordPress migration as long-term solution.</p>
+        <div class="ts-tags"><span class="ts-tag">Squarespace</span><span class="ts-tag">DNS</span><span class="ts-tag">SSL</span><span class="ts-tag">Cisco Umbrella</span></div>
+      </div>
+
+      <div class="ts-card rv">
+        <div class="ts-top"><div class="ts-icon ico-server"><svg class="ico"><use href="#i-refresh"/></svg></div><div><h4><a href="https://thenewrich.com" target="_blank" rel="noopener">thenewrich.com</a></h4><div class="ts-subtitle">GoHighLevel Migration</div></div></div>
+        <p class="ts-detail">Full platform migration into GoHighLevel — affiliate system setup, V2 funnel architecture with 1-click upsells, portal URL configuration, and CRM integration. Coordinating multi-team rollout.</p>
+        <div class="ts-tags"><span class="ts-tag">GoHighLevel</span><span class="ts-tag">Funnels</span><span class="ts-tag">CRM</span><span class="ts-tag live">Active</span></div>
+      </div>
+
+      <div class="ts-card rv rv-d1">
+        <div class="ts-top"><div class="ts-icon ico-design"><svg class="ico"><use href="#i-crane"/></svg></div><div><h4><a href="https://hairguard.co.uk" target="_blank" rel="noopener">hairguard.co.uk</a></h4><div class="ts-subtitle">WordPress Landing Page Build</div></div></div>
+        <p class="ts-detail">High-conversion landing page for a UK hair care brand. Custom Elementor Pro build replicating a premium reference design with optimized CTAs and mobile responsiveness.</p>
+        <div class="ts-tags"><span class="ts-tag">WordPress</span><span class="ts-tag">Elementor Pro</span><span class="ts-tag"><svg class="ico"><use href="#i-pin"/></svg> UK</span><span class="ts-tag live">Active</span></div>
+      </div>
+
+      <div class="ts-card rv rv-d2">
+        <div class="ts-top"><div class="ts-icon ico-fix"><svg class="ico"><use href="#i-scale"/></svg></div><div><h4>TrademarkRite</h4><div class="ts-subtitle">Active Client Engagement</div></div></div>
+        <p class="ts-detail">Ongoing full-stack web development and technical support engagement — site builds, integrations, and platform management for a trademark services business.</p>
+        <div class="ts-tags"><span class="ts-tag">Web Development</span><span class="ts-tag">Full-Stack</span><span class="ts-tag live">Active</span></div>
+      </div>
+
+      <div class="ts-card rv">
+        <div class="ts-top"><div class="ts-icon ico-perf"><svg class="ico"><use href="#i-truck"/></svg></div><div><h4>Clean Diesel Specialists</h4><div class="ts-subtitle">Active Client Engagement</div></div></div>
+        <p class="ts-detail">Ongoing web development and technical support for an automotive/diesel services business — site development, performance optimization, and digital presence management.</p>
+        <div class="ts-tags"><span class="ts-tag">Web Development</span><span class="ts-tag">Automotive</span><span class="ts-tag live">Active</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="sec-pad" id="techstack" style="background:var(--bg-alt)">
+  <div class="container">
+    <div class="sec-head center rv">
+      <div class="sec-tag">Tech Stack</div>
+      <h2 class="sec-title">Web Development Tech Stack</h2>
+      <p class="sec-desc">The platforms and languages I use to build, manage, and optimize web experiences.</p>
+    </div>
+    <div class="tech-wrap rv">
+      <div class="tech-item"><div class="tech-ico" style="background:var(--mint);color:var(--mint-d)">W</div><span class="tech-nm">WordPress</span></div>
+      <div class="tech-item"><div class="tech-ico" style="background:var(--lavender);color:var(--lavender-d)">Wc</div><span class="tech-nm">WooCommerce</span></div>
+      <div class="tech-item"><div class="tech-ico" style="background:var(--peach-light);color:var(--accent)">E</div><span class="tech-nm">Elementor Pro</span></div>
+      <div class="tech-item"><div class="tech-ico" style="background:rgba(67,83,255,.08);color:#4353ff">Wf</div><span class="tech-nm">Webflow</span></div>
+      <div class="tech-item"><div class="tech-ico" style="background:rgba(12,110,252,.08);color:#0c6efc">Wx</div><span class="tech-nm">Wix</span></div>
+      <div class="tech-item"><div class="tech-ico" style="background:var(--gold);color:var(--gold-d)">GH</div><span class="tech-nm">GoHighLevel</span></div>
+      <div class="tech-item"><div class="tech-ico" style="background:rgba(242,78,30,.08);color:#f24e1e">Fi</div><span class="tech-nm">Figma</span></div>
+      <div class="tech-item"><div class="tech-ico" style="background:rgba(119,123,179,.08);color:#777bb3">P</div><span class="tech-nm">PHP</span></div>
+      <div class="tech-item"><div class="tech-ico" style="background:rgba(227,76,38,.08);color:#e34c26">H</div><span class="tech-nm">HTML5</span></div>
+      <div class="tech-item"><div class="tech-ico" style="background:rgba(38,77,228,.08);color:#264de4">C</div><span class="tech-nm">CSS3</span></div>
+      <div class="tech-item"><div class="tech-ico" style="background:rgba(247,223,30,.1);color:#c7a800">JS</div><span class="tech-nm">JavaScript</span></div>
+      <div class="tech-item"><div class="tech-ico" style="background:var(--bg-card);color:var(--text-alt)">Sq</div><span class="tech-nm">Squarespace</span></div>
+      <div class="tech-item"><div class="tech-ico" style="background:rgba(249,130,18,.08);color:#f98212">M</div><span class="tech-nm">Moodle</span></div>
+      <div class="tech-item"><div class="tech-ico" style="background:rgba(66,133,244,.08);color:#4285f4">G</div><span class="tech-nm">Google Workspace</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS & PLUGINS -->
+<section class="sec-pad" id="tools">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="sec-tag">Tools &amp; Plugins</div>
+      <h2 class="sec-title">WordPress Plugins &amp; Developer Tools</h2>
+      <p class="sec-desc">Every tool I recommend, I've used in production across real client projects.</p>
+    </div>
+
+    <div class="tp-grid">
+
+      <div class="tp-card rv">
+        <div class="tp-card-head">
+          <div class="tp-card-ico" style="background:rgba(238,70,25,.08);color:var(--accent)"><svg class="ico"><use href="#i-palette"/></svg></div>
+          <div class="tp-card-title">Page Builders &amp; Design</div>
+        </div>
+        <div class="tp-pills">
+          <span class="tp-pill">Elementor Pro</span>
+          <span class="tp-pill">GeneratePress</span>
+          <span class="tp-pill">Gutenberg + Custom CSS</span>
+          <span class="tp-pill">Figma</span>
+          <span class="tp-pill">Webflow</span>
+          <span class="tp-pill">Wix</span>
+          <span class="tp-pill">ACF (Advanced Custom Fields)</span>
+        </div>
+      </div>
+
+      <div class="tp-card tp-security rv rv-d1">
+        <div class="tp-card-head">
+          <div class="tp-card-ico"><svg class="ico"><use href="#i-shield"/></svg></div>
+          <div class="tp-card-title">My Standard Security Stack</div>
+        </div>
+        <div class="tp-card-note">Every WordPress site I build ships with this security stack as standard.</div>
+        <div class="tp-pills">
+          <span class="tp-pill">Inactive Logout</span>
+          <span class="tp-pill">WP Activity Log</span>
+          <span class="tp-pill">UpdraftPlus</span>
+          <span class="tp-pill">WP 2FA</span>
+          <span class="tp-pill">Admin Login URL Change</span>
+          <span class="tp-pill">Limit Login Attempts</span>
+          <span class="tp-pill">AB Split Test</span>
+        </div>
+      </div>
+
+      <div class="tp-card rv rv-d2">
+        <div class="tp-card-head">
+          <div class="tp-card-ico" style="background:rgba(108,173,79,.08);color:var(--green)"><svg class="ico"><use href="#i-globe"/></svg></div>
+          <div class="tp-card-title">SEO &amp; Analytics</div>
+        </div>
+        <div class="tp-pills">
+          <span class="tp-pill">Rank Math</span>
+          <span class="tp-pill">Yoast SEO</span>
+          <span class="tp-pill">Google Analytics</span>
+          <span class="tp-pill">Google Search Console</span>
+          <span class="tp-pill">Google Business Profile</span>
+          <span class="tp-pill">MonsterInsights</span>
+        </div>
+      </div>
+
+      <div class="tp-card rv">
+        <div class="tp-card-head">
+          <div class="tp-card-ico" style="background:rgba(239,114,22,.08);color:var(--orange)"><svg class="ico"><use href="#i-bolt"/></svg></div>
+          <div class="tp-card-title">Performance &amp; Optimization</div>
+        </div>
+        <div class="tp-pills">
+          <span class="tp-pill">WP Rocket</span>
+          <span class="tp-pill">Smush</span>
+          <span class="tp-pill">Cloudflare</span>
+          <span class="tp-pill">LiteSpeed Cache</span>
+          <span class="tp-pill">WP-Optimize</span>
+        </div>
+      </div>
+
+      <div class="tp-card rv rv-d1">
+        <div class="tp-card-head">
+          <div class="tp-card-ico" style="background:rgba(150,114,196,.08);color:var(--lavender-d)"><svg class="ico"><use href="#i-bag"/></svg></div>
+          <div class="tp-card-title">E-commerce</div>
+        </div>
+        <div class="tp-pills">
+          <span class="tp-pill">WooCommerce</span>
+          <span class="tp-pill">WooCommerce Subscriptions</span>
+          <span class="tp-pill">Stripe</span>
+          <span class="tp-pill">PayPal</span>
+          <span class="tp-pill">Mobile Money Integration</span>
+          <span class="tp-pill">Multi-currency Setup</span>
+        </div>
+      </div>
+
+      <div class="tp-card rv rv-d2">
+        <div class="tp-card-head">
+          <div class="tp-card-ico" style="background:rgba(88,192,156,.08);color:var(--mint-d)"><svg class="ico"><use href="#i-server"/></svg></div>
+          <div class="tp-card-title">CRM, Automation &amp; AI</div>
+        </div>
+        <div class="tp-pills">
+          <span class="tp-pill">GoHighLevel</span>
+          <span class="tp-pill">n8n</span>
+          <span class="tp-pill">Voiceflow</span>
+          <span class="tp-pill">Botpress</span>
+          <span class="tp-pill">Retell AI</span>
+          <span class="tp-pill">Mailchimp</span>
+          <span class="tp-pill">ActiveCampaign</span>
+        </div>
+      </div>
+
+      <div class="tp-card rv">
+        <div class="tp-card-head">
+          <div class="tp-card-ico" style="background:rgba(66,133,244,.08);color:#4285f4"><svg class="ico"><use href="#i-mail"/></svg></div>
+          <div class="tp-card-title">Email &amp; Deliverability</div>
+        </div>
+        <div class="tp-pills">
+          <span class="tp-pill">Google Workspace</span>
+          <span class="tp-pill">SPF / DKIM / DMARC</span>
+          <span class="tp-pill">MX Records</span>
+          <span class="tp-pill">SMTP</span>
+          <span class="tp-pill">Brevo (Sendinblue)</span>
+        </div>
+      </div>
+
+      <div class="tp-card rv rv-d1">
+        <div class="tp-card-head">
+          <div class="tp-card-ico" style="background:rgba(119,123,179,.08);color:#777bb3"><svg class="ico"><use href="#i-tool"/></svg></div>
+          <div class="tp-card-title">Dev &amp; Backend</div>
+        </div>
+        <div class="tp-pills">
+          <span class="tp-pill">PHP</span>
+          <span class="tp-pill">MySQL</span>
+          <span class="tp-pill">REST API</span>
+          <span class="tp-pill">Firebase</span>
+          <span class="tp-pill">Payload CMS</span>
+          <span class="tp-pill">React Native</span>
+          <span class="tp-pill">Expo</span>
+          <span class="tp-pill">WP-CLI</span>
+          <span class="tp-pill">FTP/SFTP</span>
+          <span class="tp-pill">cPanel</span>
+          <span class="tp-pill">Git</span>
+        </div>
+      </div>
+
+      <div class="tp-card rv rv-d2">
+        <div class="tp-card-head">
+          <div class="tp-card-ico" style="background:rgba(212,168,67,.08);color:var(--gold-d)"><svg class="ico"><use href="#i-clipboard"/></svg></div>
+          <div class="tp-card-title">Project &amp; Client Management</div>
+        </div>
+        <div class="tp-pills">
+          <span class="tp-pill">Upwork</span>
+          <span class="tp-pill">Slack</span>
+          <span class="tp-pill">Notion</span>
+          <span class="tp-pill">Loom</span>
+          <span class="tp-pill">Zoom</span>
+          <span class="tp-pill">Trello</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="sec-pad" id="certifications">
+  <div class="container">
+    <div class="sec-head center rv">
+      <div class="sec-tag"><svg class="ico" style="width:14px;height:14px"><use href="#i-trophy"/></svg> Certifications</div>
+      <h2 class="sec-title">Professional IT Certifications &amp; Credentials</h2>
+      <p class="sec-desc">Industry-recognized certifications from leading technology providers.</p>
+    </div>
+
+    <!-- Technical Credentials Pills -->
+    <div class="cert-creds rv rv-d1">
+      <div class="cert-creds-title">Technical Credentials</div>
+      <div class="cert-cred-list">
+        <div class="cert-cred"><svg class="ico"><use href="#i-server"/></svg>Microsoft 365 Administration</div>
+        <div class="cert-cred"><svg class="ico"><use href="#i-shield"/></svg>Active Directory &amp; Exchange Server</div>
+        <div class="cert-cred"><svg class="ico"><use href="#i-mail"/></svg>Google Workspace &amp; Email Config (SPF, DKIM, DMARC)</div>
+        <div class="cert-cred"><svg class="ico"><use href="#i-layout"/></svg>WordPress (Elementor Pro, ACF Pro, WooCommerce)</div>
+        <div class="cert-cred"><svg class="ico"><use href="#i-bolt"/></svg>HTML, CSS, JavaScript, PHP, MySQL</div>
+        <div class="cert-cred"><svg class="ico"><use href="#i-tool"/></svg>IT Support &amp; Helpdesk Ops</div>
+        <div class="cert-cred"><svg class="ico"><use href="#i-wrench"/></svg>Network Troubleshooting &amp; Diagnostics</div>
+        <div class="cert-cred"><svg class="ico"><use href="#i-globe"/></svg>DNS Management &amp; Cloudflare</div>
+        <div class="cert-cred"><svg class="ico"><use href="#i-shield"/></svg>Website Security &amp; Performance</div>
+        <div class="cert-cred"><svg class="ico"><use href="#i-rocket"/></svg>AI Solutions &amp; Automation Systems</div>
+        <div class="cert-cred"><svg class="ico"><use href="#i-bolt"/></svg>Firebase (Auth, Firestore, Cloud Functions)</div>
+        <div class="cert-cred"><svg class="ico"><use href="#i-phone"/></svg>Flutter Mobile Dev (Android &amp; iOS via CI/CD)</div>
+        <div class="cert-cred"><svg class="ico"><use href="#i-refresh"/></svg>GitHub, CI/CD Pipelines (Codemagic)</div>
+      </div>
+    </div>
+
+    <!-- Certification Cards -->
+    <div class="cert-grid">
+
+      <!-- Meta Front-End Developer -->
+      <div class="cert-card prov-meta rv rv-d1">
+        <div class="cert-top">
+          <div class="cert-logo bg-meta">META</div>
+          <div>
+            <h4>Meta Front-End Developer Certificate</h4>
+            <div class="cert-provider">Meta</div>
+            <div class="cert-date">Issued June 2025</div>
+          </div>
+        </div>
+        <div class="cert-skills">
+          <span class="cert-skill">Responsive Design</span>
+          <span class="cert-skill">HTML</span>
+          <span class="cert-skill">CSS 3</span>
+          <span class="cert-skill">React</span>
+          <span class="cert-skill">React Native</span>
+          <span class="cert-skill">Version Control</span>
+          <span class="cert-skill">Wireframing</span>
+        </div>
+      </div>
+
+      <!-- Principles of UX/UI Design -->
+      <div class="cert-card prov-meta rv rv-d2">
+        <div class="cert-top">
+          <div class="cert-logo bg-meta">META</div>
+          <div>
+            <h4>Principles of UX/UI Design</h4>
+            <div class="cert-provider">Meta</div>
+            <div class="cert-date">Issued June 2025</div>
+            <div class="cert-id">ID: J9ZWUCXU86EG</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IBM IT Support Professional -->
+      <div class="cert-card prov-ibm rv rv-d1">
+        <div class="cert-top">
+          <div class="cert-logo bg-ibm">IBM</div>
+          <div>
+            <h4>IBM IT Support Professional Certificate</h4>
+            <div class="cert-provider">IBM</div>
+            <div class="cert-date">Issued February 2024</div>
+          </div>
+        </div>
+        <div class="cert-skills">
+          <span class="cert-skill">IT Support</span>
+          <span class="cert-skill">Troubleshooting</span>
+          <span class="cert-skill">Cybersecurity</span>
+          <span class="cert-skill">Networking</span>
+          <span class="cert-skill">Ticketing Systems</span>
+          <span class="cert-skill">Cloud Computing</span>
+          <span class="cert-skill">System Config</span>
+          <span class="cert-skill">Email Support</span>
+        </div>
+      </div>
+
+      <!-- Introduction to Cloud Computing -->
+      <div class="cert-card prov-ibm rv rv-d2">
+        <div class="cert-top">
+          <div class="cert-logo bg-ibm">IBM</div>
+          <div>
+            <h4>Introduction to Cloud Computing</h4>
+            <div class="cert-provider">IBM</div>
+            <div class="cert-date">Issued February 2024</div>
+          </div>
+        </div>
+        <div class="cert-skills">
+          <span class="cert-skill">IaaS</span>
+          <span class="cert-skill">PaaS</span>
+          <span class="cert-skill">SaaS</span>
+          <span class="cert-skill">IBM Cloud</span>
+          <span class="cert-skill">DevOps</span>
+          <span class="cert-skill">Containerization</span>
+          <span class="cert-skill">Git</span>
+          <span class="cert-skill">Agile</span>
+        </div>
+      </div>
+
+      <!-- Cybersecurity Essentials -->
+      <div class="cert-card prov-ibm rv rv-d3">
+        <div class="cert-top">
+          <div class="cert-logo bg-ibm">IBM</div>
+          <div>
+            <h4>Cybersecurity Essentials</h4>
+            <div class="cert-provider">IBM</div>
+            <div class="cert-date">Issued February 2024</div>
+          </div>
+        </div>
+        <div class="cert-skills">
+          <span class="cert-skill">Encryption</span>
+          <span class="cert-skill">Data Protection</span>
+          <span class="cert-skill">Email Security</span>
+          <span class="cert-skill">User Authentication</span>
+          <span class="cert-skill">Malware Removal</span>
+        </div>
+      </div>
+
+      <!-- Software, Programming, and Database Essentials -->
+      <div class="cert-card prov-ibm rv rv-d4">
+        <div class="cert-top">
+          <div class="cert-logo bg-ibm">IBM</div>
+          <div>
+            <h4>Software, Programming &amp; Database Essentials</h4>
+            <div class="cert-provider">IBM</div>
+            <div class="cert-date">Issued February 2024</div>
+          </div>
+        </div>
+        <div class="cert-skills">
+          <span class="cert-skill">Database Management</span>
+          <span class="cert-skill">Cloud Computing</span>
+          <span class="cert-skill">DBMS</span>
+        </div>
+      </div>
+
+      <!-- Technical Support Capstone -->
+      <div class="cert-card prov-ibm rv rv-d1">
+        <div class="cert-top">
+          <div class="cert-logo bg-ibm">IBM</div>
+          <div>
+            <h4>Technical Support Capstone</h4>
+            <div class="cert-provider">IBM</div>
+            <div class="cert-date">Issued February 2024</div>
+          </div>
+        </div>
+        <div class="cert-skills">
+          <span class="cert-skill">Incident Management</span>
+          <span class="cert-skill">System Security</span>
+          <span class="cert-skill">Network Engineering</span>
+          <span class="cert-skill">App Security</span>
+          <span class="cert-skill">Troubleshooting</span>
+        </div>
+      </div>
+
+      <!-- Zendesk Certified Support Admin -->
+      <div class="cert-card prov-zendesk rv rv-d2">
+        <div class="cert-top">
+          <div class="cert-logo bg-zendesk">ZD</div>
+          <div>
+            <h4>Zendesk Certified Support Admin</h4>
+            <div class="cert-provider">Zendesk</div>
+            <div class="cert-date">Issued January 2024</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Microsoft PowerPoint 2019 -->
+      <div class="cert-card prov-pearson rv rv-d3">
+        <div class="cert-top">
+          <div class="cert-logo bg-pearson">PL</div>
+          <div>
+            <h4>Microsoft PowerPoint 2019 Introductory</h4>
+            <div class="cert-provider">Pearson MyLab</div>
+            <div class="cert-date">Issued March 2023</div>
+          </div>
+        </div>
+        <div class="cert-skills">
+          <span class="cert-skill">PowerPoint</span>
+          <span class="cert-skill">Presentation Design</span>
+          <span class="cert-skill">Microsoft Office</span>
+        </div>
+      </div>
+
+      <!-- Technical Support Basics -->
+      <div class="cert-card prov-ibm rv rv-d1">
+        <div class="cert-top">
+          <div class="cert-logo bg-ibm">IBM</div>
+          <div>
+            <h4>Technical Support Basics</h4>
+            <div class="cert-provider">IBM</div>
+            <div class="cert-date">Issued September 2022</div>
+          </div>
+        </div>
+        <div class="cert-skills">
+          <span class="cert-skill">IT Infrastructure</span>
+          <span class="cert-skill">Email Support</span>
+          <span class="cert-skill">Desktop Support</span>
+          <span class="cert-skill">Live Chat Support</span>
+        </div>
+      </div>
+
+      <!-- CCNA: Intro to Networks -->
+      <div class="cert-card prov-cisco rv rv-d2">
+        <div class="cert-top">
+          <div class="cert-logo bg-cisco">CISCO</div>
+          <div>
+            <h4>CCNA: Introduction to Networks</h4>
+            <div class="cert-provider">Cisco</div>
+            <div class="cert-date">Issued July 2022</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hardware and OS Essentials -->
+      <div class="cert-card prov-ibm rv rv-d3">
+        <div class="cert-top">
+          <div class="cert-logo bg-ibm">IBM</div>
+          <div>
+            <h4>Hardware &amp; Operating System Essentials</h4>
+            <div class="cert-provider">IBM</div>
+            <div class="cert-date">Issued July 2022</div>
+          </div>
+        </div>
+        <div class="cert-skills">
+          <span class="cert-skill">Windows Admin</span>
+          <span class="cert-skill">Hardware Troubleshooting</span>
+          <span class="cert-skill">OS Development</span>
+        </div>
+      </div>
+
+      <!-- Google IT Support -->
+      <div class="cert-card prov-google rv rv-d1">
+        <div class="cert-top">
+          <div class="cert-logo bg-google">G</div>
+          <div>
+            <h4>Google IT Support Certificate</h4>
+            <div class="cert-provider">Coursera / Google</div>
+            <div class="cert-date">Issued November 2020</div>
+          </div>
+        </div>
+        <div class="cert-skills">
+          <span class="cert-skill">System Administration</span>
+          <span class="cert-skill">Troubleshooting</span>
+          <span class="cert-skill">End User Support</span>
+          <span class="cert-skill">Email Communication</span>
+        </div>
+      </div>
+
+      <!-- AI Intro -->
+      <div class="cert-card prov-ibm rv rv-d2">
+        <div class="cert-top">
+          <div class="cert-logo bg-ibm">IBM</div>
+          <div>
+            <h4>Artificial Intelligence Intro</h4>
+            <div class="cert-provider">IBM</div>
+            <div class="cert-date">Issued May 2020</div>
+          </div>
+        </div>
+        <div class="cert-skills">
+          <span class="cert-skill">Machine Learning</span>
+          <span class="cert-skill">AI</span>
+          <span class="cert-skill">NLP</span>
+        </div>
+      </div>
+
+      <!-- Data Science Orientation -->
+      <div class="cert-card prov-ibm rv rv-d3">
+        <div class="cert-top">
+          <div class="cert-logo bg-ibm">IBM</div>
+          <div>
+            <h4>Data Science Orientation</h4>
+            <div class="cert-provider">IBM</div>
+            <div class="cert-date">Issued April 2020</div>
+          </div>
+        </div>
+        <div class="cert-skills">
+          <span class="cert-skill">Data Science</span>
+          <span class="cert-skill">Machine Learning</span>
+          <span class="cert-skill">AI</span>
+        </div>
+      </div>
+
+      <!-- Data Science & Analytics Intro -->
+      <div class="cert-card prov-ibm rv rv-d4">
+        <div class="cert-top">
+          <div class="cert-logo bg-ibm">IBM</div>
+          <div>
+            <h4>Data Science &amp; Analytics Intro</h4>
+            <div class="cert-provider">IBM</div>
+            <div class="cert-date">Issued April 2020</div>
+          </div>
+        </div>
+        <div class="cert-skills">
+          <span class="cert-skill">Data Science</span>
+          <span class="cert-skill">Analytics</span>
+        </div>
+      </div>
+
+      <!-- Data Science Fundamentals -->
+      <div class="cert-card prov-ibm rv rv-d1">
+        <div class="cert-top">
+          <div class="cert-logo bg-ibm">IBM</div>
+          <div>
+            <h4>Data Science Fundamentals</h4>
+            <div class="cert-provider">IBM</div>
+            <div class="cert-date">Issued April 2020</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="sec-pad" id="blog" style="background:var(--bg-alt)">
+  <div class="container">
+    <div class="sec-head rv">
+      <div class="sec-tag">Blog &amp; Resources</div>
+      <h2 class="sec-title">Web Development Blog &amp; Guides</h2>
+      <p class="sec-desc">Practical WordPress, GoHighLevel &amp; SEO guides from 8+ years of freelance client work.</p>
+    </div>
+
+    <div class="blog-grid">
+
+      <div class="blog-card rv">
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=700&h=350&q=80" alt="WordPress security plugins - padlock on digital code" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-badge b-wp">WordPress</span>
+          <h3>7 Best WordPress Security Plugins to Install Before Launch (2026 Guide)</h3>
+          <p>A breakdown of the exact security stack I use on every WordPress build — and why each plugin earns its place.</p>
+        </div>
+        <div class="blog-card-foot">
+          <a href="blog.html#post-1" class="blog-read">Read More →</a>
+          <span class="blog-time">6 min read</span>
+        </div>
+      </div>
+
+      <div class="blog-card rv rv-d1">
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=700&h=350&q=80" alt="WordPress multisite hosting - server room" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-badge b-wp">WordPress</span>
+          <h3>WordPress Multisite vs Single Site: Which Setup Is Best for Business?</h3>
+          <p>If you run multiple locations or brands, this decision affects your budget, performance, and sanity long-term.</p>
+        </div>
+        <div class="blog-card-foot">
+          <a href="blog.html#post-2" class="blog-read">Read More →</a>
+          <span class="blog-time">5 min read</span>
+        </div>
+      </div>
+
+      <div class="blog-card rv rv-d2">
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=700&h=350&q=80" alt="WordPress crash recovery - developer debugging code" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-badge b-wp">WordPress</span>
+          <h3>How to Fix a Crashed WordPress Site Without Losing Data (Step-by-Step)</h3>
+          <p>Step-by-step walkthrough of how I've recovered sites from fatal errors, failed updates, and broken restores.</p>
+        </div>
+        <div class="blog-card-foot">
+          <a href="blog.html#post-3" class="blog-read">Read More →</a>
+          <span class="blog-time">7 min read</span>
+        </div>
+      </div>
+
+      <div class="blog-card rv">
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=700&h=350&q=80" alt="Elementor vs Gutenberg page builder comparison" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-badge b-wp">WordPress</span>
+          <h3>Elementor Pro vs Gutenberg: Which WordPress Builder Should You Use in 2026?</h3>
+          <p>An honest comparison from a developer who uses both — including when I'd recommend one over the other to a client.</p>
+        </div>
+        <div class="blog-card-foot">
+          <a href="blog.html#post-4" class="blog-read">Read More →</a>
+          <span class="blog-time">5 min read</span>
+        </div>
+      </div>
+
+      <div class="blog-card rv rv-d1">
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&h=350&q=80" alt="GoHighLevel funnels and marketing automation dashboard" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-badge b-ghl">GoHighLevel</span>
+          <h3>GoHighLevel for Beginners: How to Build Funnels, Affiliate Systems &amp; Portals</h3>
+          <p>Everything you need to understand before your first GHL build — including the parts no tutorial covers.</p>
+        </div>
+        <div class="blog-card-foot">
+          <a href="blog.html#post-5" class="blog-read">Read More →</a>
+          <span class="blog-time">8 min read</span>
+        </div>
+      </div>
+
+      <div class="blog-card rv rv-d2">
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=700&h=350&q=80" alt="GoHighLevel migration - data analytics dashboard" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-badge b-ghl">GoHighLevel</span>
+          <h3>How to Migrate to GoHighLevel from WordPress or ClickFunnels (Complete Guide)</h3>
+          <p>A practical migration guide for businesses switching from WordPress, ClickFunnels, or Kajabi to GHL.</p>
+        </div>
+        <div class="blog-card-foot">
+          <a href="blog.html#post-6" class="blog-read">Read More →</a>
+          <span class="blog-time">6 min read</span>
+        </div>
+      </div>
+
+      <div class="blog-card rv">
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=700&h=350&q=80" alt="Website migration SEO checklist planning" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-badge b-mig">Migration</span>
+          <h3>Website Migration Checklist: How to Switch Platforms Without Losing SEO Rankings</h3>
+          <p>The checklist I run through on every platform migration to make sure rankings, redirects, and content survive the move.</p>
+        </div>
+        <div class="blog-card-foot">
+          <a href="blog.html#post-7" class="blog-read">Read More →</a>
+          <span class="blog-time">7 min read</span>
+        </div>
+      </div>
+
+      <div class="blog-card rv rv-d1">
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=700&h=350&q=80" alt="Squarespace to WordPress migration workspace" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-badge b-sq">Squarespace</span>
+          <h3>Squarespace to WordPress Migration: Complete Step-by-Step Guide (2026)</h3>
+          <p>From DNS to content export to plugin setup — a real migration walkthrough based on client projects.</p>
+        </div>
+        <div class="blog-card-foot">
+          <a href="blog.html#post-8" class="blog-read">Read More →</a>
+          <span class="blog-time">6 min read</span>
+        </div>
+      </div>
+
+      <div class="blog-card rv rv-d2">
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=700&h=350&q=80" alt="DNS and hosting troubleshooting for Squarespace" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-badge b-sq">Squarespace</span>
+          <h3>5 Common Squarespace Errors That Are Actually DNS or Hosting Problems</h3>
+          <p>SSL errors, broken domains, and blocked pages — here's how to diagnose the real cause before you blame the platform.</p>
+        </div>
+        <div class="blog-card-foot">
+          <a href="blog.html#post-9" class="blog-read">Read More →</a>
+          <span class="blog-time">5 min read</span>
+        </div>
+      </div>
+
+      <div class="blog-card rv">
+        <div class="blog-card-img"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=700&h=350&q=80" alt="AI automation workflows with n8n and GoHighLevel" loading="lazy"></div>
+        <div class="blog-card-body">
+          <span class="blog-badge b-ai">AI &amp; Automation</span>
+          <h3>5 AI Automation Workflows for Client Websites Using n8n &amp; GoHighLevel</h3>
+          <p>Practical automation workflows using Voiceflow, Botpress, Retell AI, and n8n that you can deploy on real client projects today.</p>
+        </div>
+        <div class="blog-card-foot">
+          <a href="blog.html#post-10" class="blog-read">Read More →</a>
+          <span class="blog-time">8 min read</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="blog-more-wrap rv">
+      <a href="blog.html" class="blog-more">View All Posts →</a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec-pad" id="testimonials">
+  <div class="container">
+    <div class="sec-head center rv">
+      <div class="sec-tag">Testimonials</div>
+      <h2 class="sec-title">Client Reviews &amp; Testimonials</h2>
+      <p class="sec-desc">5-star Upwork reviews from real clients across WordPress development, IT support &amp; website troubleshooting projects.</p>
+    </div>
+    <div class="test-grid">
+      <div class="test-card rv">
+        <span class="test-quote">&ldquo;</span>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Salim figured out the problem almost immediately. Our nonprofit site was completely down and he had it back up and working perfectly the same evening. His communication was excellent — he kept me updated on every step. He even found and fixed additional issues I didn't know about. Tipped because he absolutely deserved it."</p>
+        <div class="test-author"><div class="test-av" style="background:linear-gradient(135deg,var(--accent),var(--orange))"><svg class="ico"><use href="#i-check"/></svg></div><div><div class="test-name">WordPress Emergency Fix</div><div class="test-role">Nonprofit Client — USA · Tipped</div></div></div>
+      </div>
+      <div class="test-card rv rv-d1">
+        <span class="test-quote">&ldquo;</span>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"After a failed backup restore crashed our entire Moodle LMS, I thought we had lost everything — all 17 courses and over 100 students' data. Salim recovered the complete system in about 8 hours of intensive work. His technical knowledge is extraordinary. We've already given him a follow-up contract."</p>
+        <div class="test-author"><div class="test-av" style="background:linear-gradient(135deg,var(--lavender-d),#c084fc)"><svg class="ico"><use href="#i-check"/></svg></div><div><div class="test-name">Moodle LMS Recovery</div><div class="test-role">Education Client · Tipped + Follow-up Contract</div></div></div>
+      </div>
+      <div class="test-card rv rv-d2">
+        <span class="test-quote">&ldquo;</span>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Salim restructured our entire Squarespace site around our 4 core services. Fixed the broken navigation, improved mobile responsiveness, and updated the design. The site looks fantastic now. We've already asked him to take on additional projects for us."</p>
+        <div class="test-author"><div class="test-av" style="background:linear-gradient(135deg,var(--mint-d),var(--green))"><svg class="ico"><use href="#i-check"/></svg></div><div><div class="test-name">Squarespace Full Revamp</div><div class="test-role">Client — Ireland · Follow-on Work Offered</div></div></div>
+      </div>
+      <div class="test-card rv rv-d3">
+        <span class="test-quote">&ldquo;</span>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Professional, efficient, and a great communicator. Salim handled our WordPress updates and set up our Google Business Profile with full verification. The analytics reporting he configured has been invaluable for tracking local search performance. Five stars without hesitation."</p>
+        <div class="test-author"><div class="test-av" style="background:linear-gradient(135deg,var(--gold-d),#e8a040)"><svg class="ico"><use href="#i-check"/></svg></div><div><div class="test-name">WordPress + GBP Setup</div><div class="test-role">Client — Australia · 5-Star Review</div></div></div>
+      </div>
+      <div class="test-card rv rv-d4">
+        <span class="test-quote">&ldquo;</span>
+        <div class="test-stars">★★★★★</div>
+        <p class="test-text">"Removed Yoast SEO causing conflicts, fixed broken filters, video embeds, phone display, and admin bar issues across our WordPress Multisite. Salim needed FTP access and Super Admin privileges and handled it all expertly. Very knowledgeable with ACF Pro and complex Multisite setups."</p>
+        <div class="test-author"><div class="test-av" style="background:linear-gradient(135deg,var(--navy),var(--navy-light))"><svg class="ico"><use href="#i-check"/></svg></div><div><div class="test-name">WordPress Multisite ACF Fix</div><div class="test-role">Agency — Australia · SynLawn Network</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sec-pad cta-sec" id="cta">
+  <div class="container">
+    <div class="cta-box rv">
+      <h2>Let's Build Something Great</h2>
+      <p>Whether you need a new website, a critical fix, or a full platform migration — I'm ready to deliver. Let's talk about your project.</p>
+      <div class="cta-btns">
+        <a href="#portfolio" class="btn btn-white">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          Browse My Work
+        </a>
+        <a href="https://www.upwork.com/freelancers/salimc?mp_source=share" target="_blank" rel="noopener" class="btn btn-ghost">Learn More About Me →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-name">Salim Kibet Cheptoek</div>
+    <div class="footer-sub">Full-Stack Web Developer &amp; IT Specialist — Toronto, Canada</div>
+    <div class="footer-badge"><span class="dot"></span>Top Rated Freelancer</div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+/* Page Loader */
+window.addEventListener('load',()=>{document.getElementById('pageLoader').classList.add('hide')});
+
+/* Nav scroll */
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>60)},{passive:true});
+
+/* Mobile menu */
+const mt=document.getElementById('mobToggle'),mm=document.getElementById('mobMenu');
+let mo=false;
+mt.addEventListener('click',()=>{
+  mo=!mo;mm.classList.toggle('open',mo);
+  const s=mt.querySelectorAll('span');
+  s[0].style.transform=mo?'rotate(45deg) translate(5px,5px)':'';
+  s[1].style.opacity=mo?'0':'1';
+  s[2].style.transform=mo?'rotate(-45deg) translate(6px,-6px)':'';
+});
+function closeMob(){mo=false;mm.classList.remove('open');const s=mt.querySelectorAll('span');s[0].style.transform='';s[1].style.opacity='1';s[2].style.transform=''}
+
+/* Active nav */
+const secs=document.querySelectorAll('section[id]'),nls=document.querySelectorAll('.nav-links a[href^="#"]');
+window.addEventListener('scroll',()=>{let c='';secs.forEach(s=>{if(scrollY>=s.offsetTop-130)c=s.id});nls.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+c))},{passive:true});
+
+/* Scroll reveal */
+const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:.06,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv,.rv-scale,.rv-left,.rv-right').forEach(el=>obs.observe(el));
+
+/* Portfolio filter */
+const tabs=document.querySelectorAll('.port-tab'),cards=document.querySelectorAll('.port-card');
+tabs.forEach(tab=>{tab.addEventListener('click',()=>{
+  tabs.forEach(t=>t.classList.remove('active'));tab.classList.add('active');
+  const f=tab.dataset.filter;
+  let idx=0;
+  cards.forEach(c=>{
+    const sh=f==='all'||c.dataset.category===f;
+    c.style.display=sh?'':'none';
+    if(sh){c.style.opacity='0';c.style.transform='translateY(20px)';
+      const d=idx*60;idx++;
+      setTimeout(()=>{c.style.transition='opacity .5s ease,transform .5s ease';c.style.opacity='1';c.style.transform='translateY(0)'},d)}
+  });
+})});
+
+/* Counter animation */
+const cEls=document.querySelectorAll('[data-count]');
+const cObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+  const el=e.target,end=parseInt(el.dataset.count),dur=1400;
+  let st=null;
+  function step(ts){if(!st)st=ts;const p=Math.min((ts-st)/dur,1);
+    const eased=1-Math.pow(1-p,3);
+    el.textContent=Math.floor(eased*end);
+    if(p<1)requestAnimationFrame(step)}
+  requestAnimationFrame(step);cObs.unobserve(el)}})},{threshold:.5});
+cEls.forEach(el=>cObs.observe(el));
+
+/* Preview modal */
+const pvM=document.getElementById('pvModal'),pvF=document.getElementById('pvFrame'),pvU=document.getElementById('pvUrl'),pvV=document.getElementById('pvVisit'),pvL=document.getElementById('pvLoad'),pvI=document.getElementById('pvInfo');
+function openPv(u,n){pvU.textContent=u.replace('https://','');pvV.href=u;pvI.textContent=n+' — Click "Visit Site" for the full live version';pvL.classList.remove('hidden');pvF.src='';pvM.classList.add('open');document.body.style.overflow='hidden';var sc='https://s0.wp.com/mshots/v1/'+encodeURIComponent(u)+'?w=1280';pvF.src=sc;pvF.onload=function(){pvL.classList.add('hidden')};setTimeout(function(){pvL.classList.add('hidden')},4000)}
+function closePv(){pvM.classList.remove('open');document.body.style.overflow='';pvF.src=''}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closePv()});
+pvM.addEventListener('click',e=>{if(e.target===pvM)closePv()});
+
+/* Hide broken card images gracefully */
+document.querySelectorAll('.port-browser-body.has-img img').forEach(img=>{img.onerror=function(){this.style.display='none';this.parentElement.classList.remove('has-img');this.parentElement.innerHTML='<div class="line a"></div><div class="line b"></div><div class="line c"></div>'}});
+
+/* Smooth parallax for hero orbs */
+let ticking=false;
+window.addEventListener('scroll',()=>{
+  if(!ticking){requestAnimationFrame(()=>{
+    const y=scrollY;
+    const o1=document.querySelector('.hero-bg-orb1');
+    const o2=document.querySelector('.hero-bg-orb2');
+    const o3=document.querySelector('.hero-bg-orb3');
+    if(o1)o1.style.transform='translateY('+y*.04+'px)';
+    if(o2)o2.style.transform='translateY('+-y*.03+'px)';
+    if(o3)o3.style.transform='translateY('+y*.02+'px)';
+    ticking=false});ticking=true}
+},{passive:true});
+
+/* Tilt on hover for browser frame */
+const bf=document.querySelector('.browser-frame');
+if(bf){bf.addEventListener('mousemove',e=>{const r=bf.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;bf.style.transform='perspective(1200px) rotateY('+x*8+'deg) rotateX('+-y*8+'deg)'});
+bf.addEventListener('mouseleave',()=>{bf.style.transform='perspective(1200px) rotateY(-5deg) rotateX(3deg)'})}
+</script>
+</body>
+</html>

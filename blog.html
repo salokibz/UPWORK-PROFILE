@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>WordPress & GoHighLevel Tutorials, SEO Guides & Migration Walkthroughs — Salim Kibet Cheptoek</title>
+<meta name="description" content="Free WordPress security, page builder, GoHighLevel funnel, website migration, and AI automation tutorials by Salim Kibet Cheptoek — freelance developer with 100+ client projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{font-family:'Inter',sans-serif;background:#fff;color:#777;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
+
+:root{
+  --accent:#EE4619;--accent-h:#D93D15;--orange:#EF7216;--peach-light:#FDEFE4;
+  --navy:#10205E;--dark:#19191F;--text:#777;--text-alt:#666C84;--text-light:#A0A6B8;
+  --bg-alt:#F6F7FB;--border:#E8ECF1;--border-h:#D0D5DD;
+  --mint-d:#58C09C;--green:#6cad4f;--lavender-d:#9672c4;--gold-d:#d4a843;
+  --radius:20px;--t:.25s;--ease:cubic-bezier(.4,0,.2,1)
+}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);padding:0 40px}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:70px}
+.nav-logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:1rem;color:var(--dark)}
+.nav-logo-mark{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--orange));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{padding:10px 18px;border-radius:10px;font-size:.84rem;font-weight:500;color:var(--text);transition:all var(--t)}
+.nav-links a:hover{color:var(--dark);background:var(--bg-alt)}
+.nav-links a.active{color:var(--accent);font-weight:600}
+.nav-cta{padding:10px 26px;border-radius:60px;font-size:.84rem;font-weight:600;color:#fff;background:linear-gradient(135deg,var(--accent),var(--orange));transition:all var(--t);box-shadow:0 4px 14px rgba(239,114,22,.15)}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(239,114,22,.25)}
+
+/* HERO */
+.blog-hero{padding:140px 0 80px;background:var(--bg-alt);text-align:center}
+.blog-hero .container{max-width:1200px;margin:0 auto;padding:0 24px}
+.blog-tag{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.16em;margin-bottom:18px;padding:8px 18px;border-radius:60px;background:rgba(238,70,25,.06);border:1px solid rgba(238,70,25,.1)}
+.blog-hero h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;color:var(--dark);letter-spacing:-.04em;line-height:1.1;margin-bottom:16px}
+.blog-hero p{font-size:1.05rem;color:var(--text);max-width:600px;margin:0 auto;line-height:1.8}
+
+/* FILTER TABS */
+.filter-bar{max-width:1200px;margin:0 auto;padding:40px 24px 0;display:flex;flex-wrap:wrap;gap:8px}
+.filter-btn{padding:10px 22px;border-radius:60px;font-size:.8rem;font-weight:600;background:#fff;border:1px solid var(--border);color:var(--text);cursor:pointer;transition:all var(--t)}
+.filter-btn:hover{border-color:var(--accent);color:var(--accent)}
+.filter-btn.active{background:linear-gradient(135deg,var(--accent),var(--orange));color:#fff;border-color:transparent}
+
+/* ARTICLES CONTAINER */
+.articles{max-width:1200px;margin:0 auto;padding:40px 24px 100px}
+
+/* ARTICLE CARD */
+.article{background:#fff;border:1px solid var(--border);border-radius:var(--radius);padding:48px 52px;margin-bottom:36px;position:relative;overflow:hidden;transition:all .5s var(--ease)}
+.article:hover{border-color:var(--border-h);box-shadow:0 16px 48px rgba(0,0,0,.05)}
+.article::before{content:'';position:absolute;top:0;left:0;width:5px;height:100%;border-radius:5px 0 0 5px}
+.article.cat-wp::before{background:#2173d2}
+.article.cat-ghl::before{background:var(--lavender-d)}
+.article.cat-mig::before{background:var(--gold-d)}
+.article.cat-sq::before{background:#ee4678}
+.article.cat-ai::before{background:var(--mint-d)}
+
+.article-badge{display:inline-flex;padding:5px 14px;border-radius:60px;font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;margin-bottom:20px}
+.b-wp{background:rgba(33,115,210,.08);color:#2173d2}
+.b-ghl{background:rgba(150,114,196,.08);color:var(--lavender-d)}
+.b-mig{background:rgba(212,168,67,.08);color:var(--gold-d)}
+.b-sq{background:rgba(238,70,120,.08);color:#ee4678}
+.b-ai{background:rgba(88,192,156,.08);color:var(--mint-d)}
+
+.article-meta{display:flex;align-items:center;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+.article-time{font-size:.72rem;color:var(--text-light);font-weight:500}
+.article-hero{height:240px;border-radius:16px;margin-bottom:24px;position:relative;overflow:hidden}
+.article-hero img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.article:hover .article-hero img{transform:scale(1.03)}
+.article-hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,.12) 100%);pointer-events:none;border-radius:16px}
+.article h2{font-size:1.6rem;font-weight:800;color:var(--dark);letter-spacing:-.03em;line-height:1.3;margin-bottom:20px}
+.article-teaser{font-size:1rem;color:var(--text);line-height:1.85;margin-bottom:24px;font-style:italic;padding-left:16px;border-left:3px solid var(--border)}
+.article-content h3{font-size:1.15rem;font-weight:700;color:var(--dark);margin:32px 0 14px;letter-spacing:-.02em}
+.article-content p{font-size:.94rem;color:var(--text);line-height:1.9;margin-bottom:16px}
+.article-content ul,.article-content ol{margin:16px 0 20px 24px}
+.article-content li{font-size:.94rem;color:var(--text);line-height:1.9;margin-bottom:8px}
+.article-content li strong{color:var(--dark);font-weight:600}
+.article-content .callout{padding:20px 24px;border-radius:14px;background:var(--bg-alt);border:1px solid var(--border);margin:24px 0;font-size:.88rem;line-height:1.8;color:var(--text-alt)}
+.article-content .callout strong{color:var(--dark)}
+.article-content code{background:var(--bg-alt);padding:2px 8px;border-radius:6px;font-size:.85rem;color:var(--navy)}
+
+.article-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:28px;padding-top:20px;border-top:1px solid var(--border)}
+.article-tag{padding:5px 14px;border-radius:60px;font-size:.68rem;font-weight:600;background:var(--bg-alt);border:1px solid var(--border);color:var(--text-alt)}
+
+/* BACK TO TOP */
+.back-top{position:fixed;bottom:30px;right:30px;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--orange));color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.2rem;box-shadow:0 4px 16px rgba(239,114,22,.25);cursor:pointer;transition:all var(--t);opacity:0;pointer-events:none;border:none}
+.back-top.show{opacity:1;pointer-events:auto}
+.back-top:hover{transform:translateY(-3px)}
+
+/* FOOTER */
+.footer{padding:50px 0;text-align:center;border-top:1px solid var(--border)}
+.footer-name{font-size:1rem;font-weight:700;color:var(--dark);margin-bottom:4px}
+.footer-sub{font-size:.8rem;color:var(--text-light)}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .nav{padding:0 20px}
+  .nav-links,.nav-cta{display:none}
+  .article{padding:30px 24px}
+  .article h2{font-size:1.25rem}
+  .filter-bar{padding:30px 16px 0}
+  .articles{padding:30px 16px 80px}
+}
+@media(max-width:480px){
+  .blog-hero{padding:120px 0 50px}
+  .blog-hero h1{font-size:1.6rem}
+  .blog-hero p{font-size:.92rem}
+  .filter-bar{gap:6px}
+  .filter-btn{padding:8px 16px;font-size:.72rem}
+  .article{padding:22px 18px}
+  .article h2{font-size:1.1rem}
+  .article-teaser{font-size:.9rem;padding-left:12px}
+  .article-content h3{font-size:1rem}
+  .article-content p,.article-content li{font-size:.86rem}
+  .article-tags{gap:4px}
+  .article-tag{font-size:.62rem;padding:4px 10px}
+  .footer-sub{font-size:.72rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-mark">SK</div>Salim Kibet</a>
+    <div class="nav-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#portfolio">Projects</a>
+      <a href="index.html#troubleshoot">Support Work</a>
+      <a href="index.html#techstack">Stack</a>
+      <a href="index.html#testimonials">Reviews</a>
+      <a href="blog.html" class="active">Blog</a>
+    </div>
+    <a href="https://www.upwork.com/services/product/development-it-salim-1960377410071263504?ref=project_share" target="_blank" rel="noopener" class="nav-cta">Let's Talk</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="blog-hero">
+  <div class="container">
+    <div class="blog-tag">Web Development Blog</div>
+    <h1>WordPress &amp; GoHighLevel Tutorials, SEO Guides &amp; Migration Walkthroughs</h1>
+    <p>Free in-depth guides on WordPress security, page builders, GoHighLevel funnels, website migrations, and AI automation — from a freelance developer with 100+ client projects.</p>
+  </div>
+</div>
+
+<!-- FILTER TABS -->
+<div class="filter-bar" id="filterBar">
+  <button class="filter-btn active" data-cat="all">All Posts</button>
+  <button class="filter-btn" data-cat="wp">WordPress</button>
+  <button class="filter-btn" data-cat="ghl">GoHighLevel</button>
+  <button class="filter-btn" data-cat="mig">Migration</button>
+  <button class="filter-btn" data-cat="sq">Squarespace</button>
+  <button class="filter-btn" data-cat="ai">AI &amp; Automation</button>
+</div>
+
+<!-- ARTICLES -->
+<div class="articles" id="articleList">
+
+<!-- POST 1 -->
+<article class="article cat-wp" id="post-1" data-cat="wp">
+  <div class="article-hero"><img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=1200&h=480&q=80" alt="WordPress security plugins - cybersecurity padlock" loading="lazy"></div>
+  <div class="article-meta">
+    <span class="article-badge b-wp">WordPress</span>
+    <span class="article-time">6 min read</span>
+  </div>
+  <h2>7 Best WordPress Security Plugins to Install Before Launch (2026 Guide)</h2>
+  <div class="article-teaser">A breakdown of the exact security stack I use on every WordPress build — and why each plugin earns its place.</div>
+  <div class="article-content">
+    <p>After building and maintaining 100+ WordPress sites, I've narrowed my standard security stack down to seven plugins. These aren't suggestions — they ship on every single build I deliver. Here's why each one made the cut.</p>
+
+    <h3>1. Inactive Logout</h3>
+    <p>Automatically logs out users after a set period of inactivity. If a client steps away from their dashboard on a shared computer, this prevents unauthorized access. Set it to 15 minutes — clients rarely notice, but it closes a real attack vector.</p>
+
+    <h3>2. WP Activity Log</h3>
+    <p>Tracks every change made in the WordPress dashboard — who logged in, what was edited, when settings were changed. When a client says "I didn't touch anything" and the site breaks, this log tells you exactly what happened. It's also critical for compliance-sensitive businesses.</p>
+
+    <h3>3. UpdraftPlus</h3>
+    <p>Automated backups to remote storage (Google Drive, Dropbox, or S3). I schedule daily database backups and weekly full-site backups. The one-click restore has saved client sites more times than I can count — especially after failed plugin updates.</p>
+
+    <h3>4. WP 2FA (Two-Factor Authentication)</h3>
+    <p>Adds TOTP-based two-factor authentication to all admin and editor accounts. This single plugin blocks the majority of brute-force login attacks. I make it mandatory for every user with publishing privileges.</p>
+
+    <h3>5. Admin Login URL Change</h3>
+    <p>Moves <code>/wp-admin</code> and <code>/wp-login.php</code> to a custom URL. This isn't security through obscurity alone — it stops automated bots from even finding the login page, which dramatically reduces server load from brute-force attempts.</p>
+
+    <h3>6. Limit Login Attempts Reloaded</h3>
+    <p>Rate-limits login attempts by IP and username. After 4 failed attempts, the IP gets locked out for 20 minutes. After 3 lockouts, it's blocked for 24 hours. This prevents sustained brute-force attacks without affecting legitimate users.</p>
+
+    <h3>7. AB Split Test</h3>
+    <p>Not a security plugin in the traditional sense — but I include it because it helps clients test changes safely before pushing them live. Rather than making irreversible changes to a production page, they can split-test variations. It's security for your conversion rate.</p>
+
+    <div class="callout"><strong>My rule:</strong> If a WordPress site leaves my hands without these seven plugins active and configured, it's not done. This is the baseline — additional security layers are added based on the project's risk profile.</div>
+  </div>
+  <div class="article-tags">
+    <span class="article-tag">WordPress</span>
+    <span class="article-tag">Security</span>
+    <span class="article-tag">Plugins</span>
+    <span class="article-tag">Best Practices</span>
+  </div>
+</article>
+
+<!-- POST 2 -->
+<article class="article cat-wp" id="post-2" data-cat="wp">
+  <div class="article-hero"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&h=480&q=80" alt="WordPress multisite server infrastructure" loading="lazy"></div>
+  <div class="article-meta">
+    <span class="article-badge b-wp">WordPress</span>
+    <span class="article-time">5 min read</span>
+  </div>
+  <h2>WordPress Multisite vs Single Site: Which Setup Is Best for Business?</h2>
+  <div class="article-teaser">If you run multiple locations or brands, this decision affects your budget, performance, and sanity long-term.</div>
+  <div class="article-content">
+    <p>When clients with multiple locations ask about their next website, this is the first question I walk through with them. The wrong choice here costs thousands to undo later.</p>
+
+    <h3>When Multisite Makes Sense</h3>
+    <ul>
+      <li><strong>Shared branding:</strong> All locations use the same theme, same look, same plugins. You update once, it rolls out everywhere.</li>
+      <li><strong>Centralized management:</strong> One dashboard for all sites. One set of updates. One hosting plan. This is ideal for franchise operations.</li>
+      <li><strong>Cost efficiency:</strong> You pay for one hosting environment instead of multiple. Plugin licenses are typically shared across the network.</li>
+    </ul>
+
+    <h3>When Separate Installs Win</h3>
+    <ul>
+      <li><strong>Different designs per location:</strong> If each branch needs its own branding, layout, or content strategy, Multisite becomes a constraint, not a convenience.</li>
+      <li><strong>Independent teams:</strong> If each location has its own marketing person making changes, separate installs prevent one admin from accidentally affecting another site.</li>
+      <li><strong>Risk isolation:</strong> If one site gets compromised or breaks, the others are unaffected. With Multisite, a bad plugin update can take down the entire network.</li>
+    </ul>
+
+    <h3>Real Example: Franchise vs. Independent</h3>
+    <p>I built a multi-location franchise site where every location needed the same look but different content. Multisite was the clear winner — one theme update, one plugin set, 12 locations all in sync.</p>
+    <p>On the flip side, I worked with a client running three completely different brands. Same owner, different industries. Multisite would've been a nightmare — separate installs gave each brand its own identity.</p>
+
+    <div class="callout"><strong>My recommendation:</strong> If the sites share 80%+ of their DNA (theme, plugins, structure), go Multisite. If they share less than 50%, go separate. In the gray zone, lean toward separate — it's easier to merge later than to split apart.</div>
+  </div>
+  <div class="article-tags">
+    <span class="article-tag">WordPress</span>
+    <span class="article-tag">Multisite</span>
+    <span class="article-tag">Architecture</span>
+    <span class="article-tag">Franchise</span>
+  </div>
+</article>
+
+<!-- POST 3 -->
+<article class="article cat-wp" id="post-3" data-cat="wp">
+  <div class="article-hero"><img src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=1200&h=480&q=80" alt="WordPress crash recovery - developer debugging" loading="lazy"></div>
+  <div class="article-meta">
+    <span class="article-badge b-wp">WordPress</span>
+    <span class="article-time">7 min read</span>
+  </div>
+  <h2>How to Fix a Crashed WordPress Site Without Losing Data (Step-by-Step)</h2>
+  <div class="article-teaser">Step-by-step walkthrough of how I've recovered sites from fatal errors, failed updates, and broken restores.</div>
+  <div class="article-content">
+    <p>Your WordPress site is showing a white screen of death, a critical error message, or a 500 internal server error. Here's exactly what I do — in order — when a client calls in with a crashed site.</p>
+
+    <h3>Step 1: Don't Panic. Access Your Hosting</h3>
+    <p>Go to cPanel or your hosting dashboard. Not WordPress. If WordPress is crashed, the admin won't load. You need file-level or database-level access.</p>
+
+    <h3>Step 2: Enable WordPress Debug Mode</h3>
+    <p>Open <code>wp-config.php</code> via File Manager or FTP. Set <code>WP_DEBUG</code> to <code>true</code> and <code>WP_DEBUG_LOG</code> to <code>true</code>. Reload the site and check <code>/wp-content/debug.log</code> — this tells you exactly which file and line caused the crash.</p>
+
+    <h3>Step 3: Identify the Cause</h3>
+    <p>In 90% of cases, it's one of these:</p>
+    <ul>
+      <li><strong>A plugin conflict</strong> — usually after an update. The debug log will reference the plugin's folder name.</li>
+      <li><strong>A theme issue</strong> — broken template file or deprecated function call.</li>
+      <li><strong>PHP version mismatch</strong> — your hosting upgraded PHP and a plugin isn't compatible.</li>
+      <li><strong>Memory exhaustion</strong> — the error log says "Allowed memory size exhausted."</li>
+    </ul>
+
+    <h3>Step 4: Fix Without the Dashboard</h3>
+    <ul>
+      <li><strong>Plugin conflict:</strong> Rename the plugin's folder via FTP (e.g., <code>/plugins/broken-plugin</code> → <code>/plugins/broken-plugin-disabled</code>). Site should come back. Then troubleshoot the plugin separately.</li>
+      <li><strong>Theme issue:</strong> Rename the active theme's folder. WordPress will fall back to a default theme.</li>
+      <li><strong>Memory:</strong> Add <code>define('WP_MEMORY_LIMIT', '256M');</code> to wp-config.php.</li>
+      <li><strong>PHP version:</strong> Downgrade PHP in cPanel to the previous version while you update incompatible plugins.</li>
+    </ul>
+
+    <h3>Step 5: Restore From Backup (If Needed)</h3>
+    <p>If the file-level fix doesn't work, restore from your most recent UpdraftPlus or hosting backup. Always restore the database and files together — partial restores can create version mismatches.</p>
+
+    <div class="callout"><strong>Prevention is cheaper:</strong> Every site I build has UpdraftPlus configured with daily automated backups. If you don't have backups, the recovery conversation gets much more expensive.</div>
+  </div>
+  <div class="article-tags">
+    <span class="article-tag">WordPress</span>
+    <span class="article-tag">Recovery</span>
+    <span class="article-tag">Troubleshooting</span>
+    <span class="article-tag">cPanel</span>
+  </div>
+</article>
+
+<!-- POST 4 -->
+<article class="article cat-wp" id="post-4" data-cat="wp">
+  <div class="article-hero"><img src="https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=1200&h=480&q=80" alt="Elementor vs Gutenberg WordPress builder comparison" loading="lazy"></div>
+  <div class="article-meta">
+    <span class="article-badge b-wp">WordPress</span>
+    <span class="article-time">5 min read</span>
+  </div>
+  <h2>Elementor Pro vs Gutenberg: Which WordPress Builder Should You Use in 2026?</h2>
+  <div class="article-teaser">An honest comparison from a developer who uses both — including when I'd recommend one over the other to a client.</div>
+  <div class="article-content">
+    <p>I'm not in the Elementor-or-nothing camp. I'm not in the Gutenberg-purist camp either. I use whichever tool fits the project. Here's how I decide.</p>
+
+    <h3>When I Use Elementor Pro</h3>
+    <ul>
+      <li><strong>Clients who need to edit visually.</strong> If the client isn't technical and wants to drag-and-drop content changes, Elementor is unbeatable. They can see exactly what they're changing in real time.</li>
+      <li><strong>Marketing-heavy sites.</strong> Landing pages, funnels, A/B testing layouts, popup builders — Elementor Pro has these built in. With Gutenberg, you'd need multiple separate plugins.</li>
+      <li><strong>Fast turnaround projects.</strong> When a client needs a full site in 5-7 days, Elementor templates and pre-built sections cut build time significantly.</li>
+    </ul>
+
+    <h3>When I Use Gutenberg + Custom CSS</h3>
+    <ul>
+      <li><strong>Performance-critical sites.</strong> Gutenberg outputs cleaner, lighter HTML. No extra JavaScript libraries loading on every page. For sites where speed scores matter (Core Web Vitals), this makes a measurable difference.</li>
+      <li><strong>Developer-managed sites.</strong> If I'm the one maintaining the site long-term, Gutenberg with ACF and custom blocks gives me more control with less bloat.</li>
+      <li><strong>Simple content sites.</strong> Blogs, documentation sites, informational pages — these don't need a page builder. Gutenberg handles them natively.</li>
+    </ul>
+
+    <h3>The Honest Trade-offs</h3>
+    <p>Elementor adds ~200-400KB of CSS/JS to every page load. On fast hosting with caching, users barely notice. On budget hosting without optimization, it's visible in performance audits. Gutenberg launches with near-zero overhead but requires more development time for complex layouts.</p>
+
+    <div class="callout"><strong>My default:</strong> If the client will be editing content themselves → Elementor Pro. If performance is the top priority or I'm managing the site → Gutenberg + ACF. There's no wrong answer — only wrong fits.</div>
+  </div>
+  <div class="article-tags">
+    <span class="article-tag">WordPress</span>
+    <span class="article-tag">Elementor</span>
+    <span class="article-tag">Gutenberg</span>
+    <span class="article-tag">Performance</span>
+  </div>
+</article>
+
+<!-- POST 5 -->
+<article class="article cat-ghl" id="post-5" data-cat="ghl">
+  <div class="article-hero"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&h=480&q=80" alt="GoHighLevel marketing automation dashboard" loading="lazy"></div>
+  <div class="article-meta">
+    <span class="article-badge b-ghl">GoHighLevel</span>
+    <span class="article-time">8 min read</span>
+  </div>
+  <h2>GoHighLevel for Beginners: How to Build Funnels, Affiliate Systems &amp; Portals</h2>
+  <div class="article-teaser">Everything you need to understand before your first GHL build — including the parts no tutorial covers.</div>
+  <div class="article-content">
+    <p>GoHighLevel is powerful. It's also overwhelming if you've never used it. This guide covers what I wish someone had told me before my first build.</p>
+
+    <h3>What GoHighLevel Actually Is</h3>
+    <p>It's an all-in-one platform that replaces your website builder, CRM, email marketing tool, funnel builder, appointment scheduler, and more. Think of it as ClickFunnels + Mailchimp + Calendly + a basic CRM, all in one dashboard.</p>
+
+    <h3>Setting Up Your First Funnel</h3>
+    <ol>
+      <li><strong>Start with the goal.</strong> Lead capture? Product sale? Webinar registration? The funnel type determines your page structure.</li>
+      <li><strong>Use a template, then customize.</strong> GHL's funnel templates are solid starting points. Don't build from scratch unless you have a specific reason.</li>
+      <li><strong>Connect your domain.</strong> Always use a custom domain — not the default GHL subdomain. This is critical for trust and deliverability.</li>
+      <li><strong>Set up automation triggers.</strong> When someone fills out a form → tag them → email them → add to pipeline. This is where GHL's real power lives.</li>
+    </ol>
+
+    <h3>Building an Affiliate System</h3>
+    <p>GHL has a built-in affiliate manager. You can create referral links, set commission structures (percentage or flat), and track conversions. The setup takes about 30 minutes, but the testing phase takes longer — always run test transactions before going live.</p>
+
+    <h3>Client Portals</h3>
+    <p>The membership/portal feature lets you create gated content areas. Clients log in, see their courses, resources, or deliverables. It's not as polished as Teachable or Kajabi, but it's good enough for most use cases — and it's included in the platform cost.</p>
+
+    <div class="callout"><strong>What tutorials won't tell you:</strong> GHL's email deliverability requires setup. You need to warm up your sending domain, configure DKIM/SPF, and start with low volume. Skip this step and your client's emails land in spam.</div>
+  </div>
+  <div class="article-tags">
+    <span class="article-tag">GoHighLevel</span>
+    <span class="article-tag">Funnels</span>
+    <span class="article-tag">Affiliate</span>
+    <span class="article-tag">CRM</span>
+  </div>
+</article>
+
+<!-- POST 6 -->
+<article class="article cat-ghl" id="post-6" data-cat="ghl">
+  <div class="article-hero"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&h=480&q=80" alt="GoHighLevel migration analytics dashboard" loading="lazy"></div>
+  <div class="article-meta">
+    <span class="article-badge b-ghl">GoHighLevel</span>
+    <span class="article-time">6 min read</span>
+  </div>
+  <h2>How to Migrate to GoHighLevel from WordPress or ClickFunnels (Complete Guide)</h2>
+  <div class="article-teaser">A practical migration guide for businesses switching from WordPress, ClickFunnels, or Kajabi to GHL.</div>
+  <div class="article-content">
+    <p>Migrating an existing business to GoHighLevel isn't a one-click import. Here's how I approach it for clients.</p>
+
+    <h3>What You Can Move</h3>
+    <ul>
+      <li><strong>Contact lists:</strong> Export from your current CRM/email tool as CSV → import into GHL with field mapping. Clean duplicates first.</li>
+      <li><strong>Email templates:</strong> Rebuild in GHL's email builder. Direct HTML imports work but often need tweaking for GHL's rendering engine.</li>
+      <li><strong>Automation workflows:</strong> Map your existing automations on paper, then rebuild in GHL's workflow builder. This is the most time-consuming step.</li>
+    </ul>
+
+    <h3>What You Should Rebuild</h3>
+    <ul>
+      <li><strong>Funnels and landing pages:</strong> ClickFunnels pages don't copy over. Rebuild them in GHL using templates — often faster than trying to replicate pixel-perfect.</li>
+      <li><strong>Forms and surveys:</strong> Rebuild natively so they connect to GHL's pipeline and automation system.</li>
+      <li><strong>Booking/calendar:</strong> Set up GHL's built-in calendar instead of trying to integrate Calendly. Fewer moving parts is always better.</li>
+    </ul>
+
+    <h3>What to Leave Behind</h3>
+    <ul>
+      <li><strong>Complex WordPress sites:</strong> If your main website has 50+ pages with custom functionality, keep it on WordPress. Use GHL for funnels, CRM, and automation only.</li>
+      <li><strong>Advanced e-commerce:</strong> GHL's e-commerce is basic. If you rely on WooCommerce features (subscriptions, variable products, tax rules), keep the store separate.</li>
+    </ul>
+
+    <div class="callout"><strong>My migration timeline:</strong> Simple businesses (landing page + CRM + email) take 1-2 weeks. Complex setups (multiple funnels + affiliate system + membership portal + automations) take 3-5 weeks. Don't let anyone tell you it's a weekend project.</div>
+  </div>
+  <div class="article-tags">
+    <span class="article-tag">GoHighLevel</span>
+    <span class="article-tag">Migration</span>
+    <span class="article-tag">ClickFunnels</span>
+    <span class="article-tag">Kajabi</span>
+  </div>
+</article>
+
+<!-- POST 7 -->
+<article class="article cat-mig" id="post-7" data-cat="mig">
+  <div class="article-hero"><img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=1200&h=480&q=80" alt="Website SEO migration checklist planning" loading="lazy"></div>
+  <div class="article-meta">
+    <span class="article-badge b-mig">Migration</span>
+    <span class="article-time">7 min read</span>
+  </div>
+  <h2>Website Migration Checklist: How to Switch Platforms Without Losing SEO Rankings</h2>
+  <div class="article-teaser">The checklist I run through on every platform migration to make sure rankings, redirects, and content survive the move.</div>
+  <div class="article-content">
+    <p>I've migrated sites between WordPress, Squarespace, Wix, Webflow, and GoHighLevel. Every migration risks breaking SEO if you skip steps. Here's my exact checklist.</p>
+
+    <h3>Before the Migration</h3>
+    <ol>
+      <li><strong>Crawl your current site.</strong> Use Screaming Frog or a similar tool to get a complete list of URLs, page titles, meta descriptions, and canonical tags. This is your source of truth.</li>
+      <li><strong>Export Google Search Console data.</strong> Download your top-performing pages, queries, and indexed URLs. You'll reference this to verify nothing drops after the move.</li>
+      <li><strong>Document all 301 redirects needed.</strong> If any URL structures will change, map old URLs → new URLs. Every single one.</li>
+      <li><strong>Backup everything.</strong> Full database, files, media, and content export. Store in two locations.</li>
+    </ol>
+
+    <h3>During the Migration</h3>
+    <ol>
+      <li><strong>Build the new site in staging.</strong> Never migrate directly on the live domain. Build, test, and verify on a staging URL first.</li>
+      <li><strong>Preserve URL structures.</strong> If you can keep the same URLs (/about, /services/design), do it. Changed URLs = redirect complexity.</li>
+      <li><strong>Implement 301 redirects.</strong> For every URL that changes, set up a permanent 301 redirect from the old path to the new one.</li>
+      <li><strong>Transfer meta data.</strong> Page titles, meta descriptions, and Open Graph tags should match or improve — never leave them blank.</li>
+    </ol>
+
+    <h3>After the Migration</h3>
+    <ol>
+      <li><strong>Submit the new sitemap</strong> to Google Search Console immediately.</li>
+      <li><strong>Test every redirect.</strong> Crawl the old URL list and verify each one resolves to the correct new page with a 301 status.</li>
+      <li><strong>Monitor Search Console for 30 days.</strong> Watch for Coverage errors, indexing drops, and 404 spikes.</li>
+      <li><strong>Check Core Web Vitals.</strong> The new platform may load faster or slower — verify and optimize if needed.</li>
+    </ol>
+
+    <div class="callout"><strong>The #1 migration mistake:</strong> Forgetting to set up 301 redirects for old blog posts. Homepages and service pages get attention — but blogs often carry the most organic traffic. Redirect every single one.</div>
+  </div>
+  <div class="article-tags">
+    <span class="article-tag">Migration</span>
+    <span class="article-tag">SEO</span>
+    <span class="article-tag">301 Redirects</span>
+    <span class="article-tag">Checklist</span>
+  </div>
+</article>
+
+<!-- POST 8 -->
+<article class="article cat-sq" id="post-8" data-cat="sq">
+  <div class="article-hero"><img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?auto=format&fit=crop&w=1200&h=480&q=80" alt="Squarespace to WordPress migration workspace" loading="lazy"></div>
+  <div class="article-meta">
+    <span class="article-badge b-sq">Squarespace</span>
+    <span class="article-time">6 min read</span>
+  </div>
+  <h2>Squarespace to WordPress Migration: Complete Step-by-Step Guide (2026)</h2>
+  <div class="article-teaser">From DNS to content export to plugin setup — a real migration walkthrough based on client projects.</div>
+  <div class="article-content">
+    <p>I've moved several client sites from Squarespace to WordPress. It's not as simple as exporting and importing. Here's what actually happens.</p>
+
+    <h3>Why Clients Switch</h3>
+    <p>The most common reasons: they need WooCommerce for more advanced e-commerce, they want custom functionality Squarespace can't provide, or they've outgrown Squarespace's design limitations. Some need multi-author blogs with proper editorial workflows.</p>
+
+    <h3>The Export Process</h3>
+    <p>Squarespace exports content as an XML file — but it's limited. You get blog posts and basic pages. You don't get product data, form submissions, custom CSS, or media files in the export. Images stay hosted on Squarespace's CDN until you manually download and re-upload them.</p>
+
+    <h3>DNS and Domain Transfer</h3>
+    <p>If your domain is registered through Squarespace, you'll need to transfer it to a registrar like Namecheap or Cloudflare, or point the DNS to your new WordPress hosting. This step has a propagation period of up to 48 hours — plan for brief downtime.</p>
+
+    <h3>What Gets Rebuilt</h3>
+    <ul>
+      <li><strong>Design:</strong> Squarespace templates don't translate to WordPress. You're choosing a new theme and rebuilding the visual layout from scratch.</li>
+      <li><strong>Forms:</strong> Squarespace forms don't export. Rebuild in a plugin like WPForms or Gravity Forms.</li>
+      <li><strong>E-commerce:</strong> Product data (images, descriptions, variants, pricing) needs manual migration or a CSV import into WooCommerce.</li>
+      <li><strong>SEO settings:</strong> Meta titles, descriptions, and custom URLs need to be manually re-entered using Rank Math or Yoast.</li>
+    </ul>
+
+    <div class="callout"><strong>Timeline expectation:</strong> A simple Squarespace blog → WordPress migration takes 3-5 days. An e-commerce site with 100+ products takes 2-3 weeks. The content export is fast — the rebuild and QA are where the time goes.</div>
+  </div>
+  <div class="article-tags">
+    <span class="article-tag">Squarespace</span>
+    <span class="article-tag">WordPress</span>
+    <span class="article-tag">Migration</span>
+    <span class="article-tag">DNS</span>
+  </div>
+</article>
+
+<!-- POST 9 -->
+<article class="article cat-sq" id="post-9" data-cat="sq">
+  <div class="article-hero"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&h=480&q=80" alt="DNS and hosting troubleshooting network cables" loading="lazy"></div>
+  <div class="article-meta">
+    <span class="article-badge b-sq">Squarespace</span>
+    <span class="article-time">5 min read</span>
+  </div>
+  <h2>5 Common Squarespace Errors That Are Actually DNS or Hosting Problems</h2>
+  <div class="article-teaser">SSL errors, broken domains, and blocked pages — here's how to diagnose the real cause before you blame the platform.</div>
+  <div class="article-content">
+    <p>When a Squarespace site breaks, clients blame Squarespace. But in many cases, the issue is DNS, hosting configuration, or network-level. Here are five I've diagnosed and fixed.</p>
+
+    <h3>1. "Site Not Secure" SSL Warning</h3>
+    <p>Squarespace provides free SSL, but it only works if the DNS is configured correctly. If the domain is pointing through a third-party service (like Cloudflare proxy) without the right settings, the SSL certificate can't provision. Fix: Verify DNS records match Squarespace's requirements — CNAME for www, A records for root domain.</p>
+
+    <h3>2. Domain Shows a Parking Page</h3>
+    <p>The domain was pointed to Squarespace, but the client sees a "this domain is parked" page. This happens when the domain registrar still has default nameservers or A records. Fix: Update DNS at the registrar level. Clear your browser's DNS cache and wait for propagation.</p>
+
+    <h3>3. Site Works on Some Networks, Not Others</h3>
+    <p>This is almost always a Cisco Umbrella, corporate firewall, or ISP filtering issue. The site is live, but certain networks block it based on category filters. Fix: Check if the site loads on cellular data. If yes, the issue is the network — not Squarespace. Contact the network admin to whitelist the domain.</p>
+
+    <h3>4. Email Not Working on the Domain</h3>
+    <p>Squarespace doesn't provide email hosting. If the client sets up Google Workspace email (you@yourdomain.com) but doesn't configure MX records properly, emails bounce. Fix: Add Google Workspace MX records to the DNS zone. Don't forget to also add SPF, DKIM, and DMARC records for deliverability.</p>
+
+    <h3>5. Redirect Loops After Custom Domain Setup</h3>
+    <p>This happens when the client sets up both a www and non-www version of the domain but the DNS records conflict. Squarespace expects a specific configuration. Fix: Use their exact DNS setup guide — one A record pair for the root domain and one CNAME for www pointing to <code>ext-cust.squarespace.com</code>.</p>
+
+    <div class="callout"><strong>Before you call support:</strong> 80% of Squarespace issues I've been hired to fix were actually DNS misconfigurations. Always check DNS first.</div>
+  </div>
+  <div class="article-tags">
+    <span class="article-tag">Squarespace</span>
+    <span class="article-tag">DNS</span>
+    <span class="article-tag">SSL</span>
+    <span class="article-tag">Troubleshooting</span>
+  </div>
+</article>
+
+<!-- POST 10 -->
+<article class="article cat-ai" id="post-10" data-cat="ai">
+  <div class="article-hero"><img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&h=480&q=80" alt="AI automation workflows with n8n and GoHighLevel" loading="lazy"></div>
+  <div class="article-meta">
+    <span class="article-badge b-ai">AI &amp; Automation</span>
+    <span class="article-time">8 min read</span>
+  </div>
+  <h2>5 AI Automation Workflows for Client Websites Using n8n &amp; GoHighLevel</h2>
+  <div class="article-teaser">Practical automation workflows using Voiceflow, Botpress, Retell AI, and n8n that you can deploy on real client projects today.</div>
+  <div class="article-content">
+    <p>AI automation isn't just for SaaS companies. I've added these workflows to client websites — local businesses, e-commerce stores, and service providers. Each one saves time, converts more leads, or reduces manual work.</p>
+
+    <h3>1. AI-Powered Lead Qualification Chatbot</h3>
+    <p><strong>Tools:</strong> Botpress + GHL Pipeline</p>
+    <p>A chatbot embedded on the website asks qualifying questions (budget, timeline, project type). Based on answers, it either books a call via GHL's calendar or adds the lead to a nurture sequence. Unqualified leads get a polite resource page. This saves the client 5+ hours per week of pre-screening calls.</p>
+
+    <h3>2. Automated Review Request Workflow</h3>
+    <p><strong>Tools:</strong> n8n + GHL + Google Business Profile</p>
+    <p>When a job is marked "complete" in GHL's pipeline, n8n triggers an automated workflow: wait 24 hours → send a personalized review request email → if no response after 3 days → send an SMS follow-up. This has increased review rates by 40%+ for service businesses.</p>
+
+    <h3>3. AI Voice Agent for After-Hours Calls</h3>
+    <p><strong>Tools:</strong> Retell AI + GHL</p>
+    <p>When the business is closed, incoming calls are answered by an AI voice agent. It captures the caller's name, issue, and availability, then creates a contact in GHL with the call summary. The client wakes up to qualified leads instead of voicemails they'll never listen to.</p>
+
+    <h3>4. Smart Content Personalization</h3>
+    <p><strong>Tools:</strong> Voiceflow + Website Integration</p>
+    <p>A Voiceflow assistant embedded on the site asks visitors what they're looking for. Based on responses, it dynamically recommends services, case studies, or pricing tiers. Instead of a generic homepage, each visitor gets a guided experience. Conversion rates increase because visitors see what's relevant to them immediately.</p>
+
+    <h3>5. Automated Proposal Generation</h3>
+    <p><strong>Tools:</strong> n8n + OpenAI API + GHL</p>
+    <p>When a lead fills out a detailed intake form, n8n processes the responses, sends them to OpenAI to generate a draft proposal, and emails it to the client within minutes. The business owner reviews and sends — cutting proposal turnaround from 2 days to 2 hours.</p>
+
+    <div class="callout"><strong>The key insight:</strong> None of these replace human interaction. They replace the tedious parts — pre-screening, scheduling, follow-ups, and data entry. The business owner spends more time on high-value work and less on admin.</div>
+  </div>
+  <div class="article-tags">
+    <span class="article-tag">AI</span>
+    <span class="article-tag">Automation</span>
+    <span class="article-tag">n8n</span>
+    <span class="article-tag">GoHighLevel</span>
+    <span class="article-tag">Voiceflow</span>
+    <span class="article-tag">Botpress</span>
+  </div>
+</article>
+
+</div>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container" style="max-width:1200px;margin:0 auto;padding:0 24px">
+    <div class="footer-name">Salim Kibet Cheptoek</div>
+    <div class="footer-sub">Full-Stack Web Developer &amp; IT Specialist — Toronto, Canada</div>
+  </div>
+</footer>
+
+<script>
+/* Filter tabs */
+const btns=document.querySelectorAll('.filter-btn');
+const arts=document.querySelectorAll('.article');
+btns.forEach(b=>b.addEventListener('click',()=>{
+  btns.forEach(x=>x.classList.remove('active'));b.classList.add('active');
+  const c=b.dataset.cat;
+  arts.forEach(a=>{a.style.display=(c==='all'||a.dataset.cat===c)?'':'none'});
+}));
+
+/* Back to top */
+const btt=document.getElementById('backTop');
+window.addEventListener('scroll',()=>{btt.classList.toggle('show',scrollY>400)},{passive:true});
+
+/* Smooth hash scroll on load */
+if(window.location.hash){
+  setTimeout(()=>{const el=document.querySelector(window.location.hash);if(el)el.scrollIntoView({behavior:'smooth'})},300);
+}
+</script>
+</body>
+</html>
