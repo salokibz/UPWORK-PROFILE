@@ -224,6 +224,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 .cat-corporate{background:rgba(16,32,94,.08);color:var(--navy)}
 .cat-nonprofit{background:rgba(238,70,25,.08);color:var(--accent)}
 .cat-mobile{background:rgba(212,168,67,.1);color:var(--gold-d)}
+.cat-travel{background:rgba(0,150,199,.1);color:#0096c7}
 .port-card h3{font-size:1.12rem;font-weight:700;color:var(--dark);margin-bottom:8px;display:flex;align-items:center;gap:8px}
 .port-card h3 .arr{opacity:0;transform:translateX(-6px);transition:all var(--t) var(--ease);color:var(--accent)}
 .port-card:hover h3 .arr{opacity:1;transform:translateX(0)}
@@ -280,10 +281,14 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 
 /* === TECH === */
 .tech-wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
-.tech-item{display:flex;flex-direction:column;align-items:center;gap:14px;padding:30px 24px;border-radius:var(--radius);background:#fff;border:1px solid var(--border);width:135px;transition:all .5s var(--ease)}
+.tech-item{display:flex;flex-direction:column;align-items:center;gap:14px;padding:30px 24px;border-radius:var(--radius);background:#fff;border:1px solid var(--border);width:135px;transition:all .5s var(--ease);opacity:0;transform:translateY(30px) scale(.92);animation:techPop .6s var(--ease) forwards;animation-play-state:paused}
+.tech-wrap.vis .tech-item{animation-play-state:running}
+.tech-item:nth-child(1){animation-delay:.05s}.tech-item:nth-child(2){animation-delay:.1s}.tech-item:nth-child(3){animation-delay:.15s}.tech-item:nth-child(4){animation-delay:.2s}.tech-item:nth-child(5){animation-delay:.25s}.tech-item:nth-child(6){animation-delay:.3s}.tech-item:nth-child(7){animation-delay:.35s}.tech-item:nth-child(8){animation-delay:.4s}.tech-item:nth-child(9){animation-delay:.45s}.tech-item:nth-child(10){animation-delay:.5s}.tech-item:nth-child(11){animation-delay:.55s}.tech-item:nth-child(12){animation-delay:.6s}.tech-item:nth-child(13){animation-delay:.65s}.tech-item:nth-child(14){animation-delay:.7s}
+@keyframes techPop{to{opacity:1;transform:translateY(0) scale(1)}}
 .tech-item:hover{border-color:var(--border-h);transform:translateY(-6px);box-shadow:0 14px 40px rgba(0,0,0,.06)}
-.tech-ico{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;transition:transform var(--t) var(--bounce)}
-.tech-item:hover .tech-ico{transform:scale(1.1) rotate(-5deg)}
+.tech-ico{width:56px;height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.2rem;transition:transform var(--t) var(--bounce);animation:iconFloat 3s ease-in-out infinite}
+@keyframes iconFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.tech-item:hover .tech-ico{transform:scale(1.15) rotate(-8deg);animation:none}
 .tech-nm{font-size:.74rem;font-weight:600;color:var(--text-alt);text-align:center}
 
 /* === TOOLS & PLUGINS === */
@@ -597,7 +602,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
 <div class="trusted rv">
   <div class="container">
     <div class="trusted-inner">
-      <div class="trusted-label">Trusted by businesses in 5+ countries</div>
+      <div class="trusted-label">Trusted by businesses in 10+ countries</div>
       <div style="overflow:hidden">
         <div class="marquee-track">
           <span class="trusted-logo">Men In Kilts</span>
@@ -606,14 +611,24 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
           <span class="trusted-logo">ByPress</span>
           <span class="trusted-logo">Dr. Alora</span>
           <span class="trusted-logo">UStoreIt</span>
-          <span class="trusted-logo">HairGuard</span>
+          <span class="trusted-logo">Scrubbins Canada</span>
+          <span class="trusted-logo">Johnbow Tours</span>
+          <span class="trusted-logo">Grey Impala Safaris</span>
+          <span class="trusted-logo">Moran Liquors</span>
+          <span class="trusted-logo">SpotOn Vacations</span>
+          <span class="trusted-logo">Gateway Commodities</span>
           <span class="trusted-logo">Men In Kilts</span>
           <span class="trusted-logo">Main Street PT</span>
           <span class="trusted-logo">SynLawn Australia</span>
           <span class="trusted-logo">ByPress</span>
           <span class="trusted-logo">Dr. Alora</span>
           <span class="trusted-logo">UStoreIt</span>
-          <span class="trusted-logo">HairGuard</span>
+          <span class="trusted-logo">Scrubbins Canada</span>
+          <span class="trusted-logo">Johnbow Tours</span>
+          <span class="trusted-logo">Grey Impala Safaris</span>
+          <span class="trusted-logo">Moran Liquors</span>
+          <span class="trusted-logo">SpotOn Vacations</span>
+          <span class="trusted-logo">Gateway Commodities</span>
         </div>
       </div>
     </div>
@@ -695,6 +710,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
       <button class="port-tab" data-filter="tech">Tech &amp; SaaS</button>
       <button class="port-tab" data-filter="corporate">Corporate</button>
       <button class="port-tab" data-filter="nonprofit">Nonprofit</button>
+      <button class="port-tab" data-filter="travel">Travel &amp; Tourism</button>
       <button class="port-tab" data-filter="mobile">Mobile Apps</button>
     </div>
 
@@ -848,6 +864,49 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{max-width:100%;displ
         <div class="port-preview"><div class="port-gradient g-lavender"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">profrenchcampus.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fprofrenchcampus.com?w=600" alt="ProFrench Campus website" loading="lazy"></div></div></div></div>
         <div class="port-body"><span class="port-cat cat-tech"><svg class="ico"><use href="#i-book"/></svg> Education</span><h3>ProFrench Campus <span class="arr">↗</span></h3><p>Online language learning platform — course catalog, student enrollment, progress tracking, and LMS integration for French education.</p></div>
         <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Global</span><a href="https://profrenchcampus.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <!-- AVIDNI FIRM — Travel & Tourism + Services -->
+      <div class="port-card rv" data-category="travel" onclick="openPv('https://johnbowtoursandtravel.com','Johnbow Tours')">
+        <div class="port-preview"><div class="port-gradient g-mint"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">johnbowtoursandtravel.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fjohnbowtoursandtravel.com?w=600" alt="Johnbow Tours website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-travel"><svg class="ico"><use href="#i-globe"/></svg> Travel &amp; Tourism</span><h3>Johnbow Tours <span class="arr">↗</span></h3><p>Tours and travel company website — trip packages, destination guides, booking system, itinerary builder, and customer testimonials.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Kenya</span><a href="https://johnbowtoursandtravel.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="travel" onclick="openPv('https://greyimpalasafaris.com','Grey Impala Safaris')">
+        <div class="port-preview"><div class="port-gradient g-gold"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">greyimpalasafaris.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fgreyimpalasafaris.com?w=600" alt="Grey Impala Safaris website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-travel"><svg class="ico"><use href="#i-globe"/></svg> Travel &amp; Tourism</span><h3>Grey Impala Safaris <span class="arr">↗</span></h3><p>Safari tours operator — wildlife packages, luxury lodge bookings, photo gallery, guided tour scheduling, and destination highlights.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Kenya</span><a href="https://greyimpalasafaris.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="travel" onclick="openPv('https://royalprivatesafaris.com','Royal Private Safaris')">
+        <div class="port-preview"><div class="port-gradient g-peach"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">royalprivatesafaris.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Froyalprivatesafaris.com?w=600" alt="Royal Private Safaris website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-travel"><svg class="ico"><use href="#i-globe"/></svg> Travel &amp; Tourism</span><h3>Royal Private Safaris <span class="arr">↗</span></h3><p>Premium safari experience — luxury private tours, wildlife conservation programs, camp accommodations, and custom itinerary planning.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Kenya</span><a href="https://royalprivatesafaris.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="travel" onclick="openPv('https://easytoursafari.co.ke','Easy Tour Safari')">
+        <div class="port-preview"><div class="port-gradient g-mint"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">easytoursafari.co.ke</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Feasytoursafari.co.ke?w=600" alt="Easy Tour Safari website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-travel"><svg class="ico"><use href="#i-globe"/></svg> Travel &amp; Tourism</span><h3>Easy Tour Safari <span class="arr">↗</span></h3><p>Tour company website — safari trip packages, real-time availability, group booking, destination photography, and traveler reviews.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Kenya</span><a href="https://easytoursafari.co.ke" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="travel" onclick="openPv('https://spotonvacations.com','SpotOn Vacations')">
+        <div class="port-preview"><div class="port-gradient g-lavender"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">spotonvacations.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fspotonvacations.com?w=600" alt="SpotOn Vacations website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-travel"><svg class="ico"><use href="#i-globe"/></svg> Travel &amp; Tourism</span><h3>SpotOn Vacations <span class="arr">↗</span></h3><p>Vacation planning platform — holiday packages, flight + hotel bundles, travel guides, and automated booking confirmation system.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Kenya</span><a href="https://spotonvacations.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="ecommerce" onclick="openPv('https://moranliquors.com','Moran Liquors')">
+        <div class="port-preview"><div class="port-gradient g-orange"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">moranliquors.com</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fmoranliquors.com?w=600" alt="Moran Liquors website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-ecommerce"><svg class="ico"><use href="#i-bag"/></svg> E-commerce</span><h3>Moran Liquors <span class="arr">↗</span></h3><p>Liquor store e-commerce — product catalog with age verification, delivery zones, inventory management, and secure checkout.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Kenya</span><a href="https://moranliquors.com" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
+      </div>
+
+      <div class="port-card rv" data-category="services" onclick="openPv('https://scrubbins.ca','Scrubbins Canada')">
+        <div class="port-preview"><div class="port-gradient g-peach"><div class="port-browser"><div class="port-browser-bar"><span class="dot" style="background:#ff5f57"></span><span class="dot" style="background:#febc2e"></span><span class="dot" style="background:#28c840"></span><span class="url">scrubbins.ca</span></div><div class="port-browser-body has-img"><img src="https://s0.wp.com/mshots/v1/https%3A%2F%2Fscrubbins.ca?w=600" alt="Scrubbins Canada website" loading="lazy"></div></div></div></div>
+        <div class="port-body"><span class="port-cat cat-service"><svg class="ico"><use href="#i-tool"/></svg> Local Services</span><h3>Scrubbins Canada <span class="arr">↗</span></h3><p>Bin cleaning service — online booking, service area coverage maps, subscription plans, before/after gallery, and customer reviews.</p></div>
+        <div class="port-foot"><span class="port-loc"><svg class="ico"><use href="#i-globe"/></svg> Canada</span><a href="https://scrubbins.ca" target="_blank" rel="noopener" class="port-link" onclick="event.stopPropagation()">Visit →</a></div>
       </div>
 
     </div>
