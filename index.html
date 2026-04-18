@@ -94,6 +94,10 @@ body.dark .trusted-logo{color:#ccc}
 .grain{position:fixed;inset:0;z-index:9996;pointer-events:none;opacity:.025;mix-blend-mode:multiply}
 .grain::after{content:'';position:absolute;inset:-200%;width:400%;height:400%;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grainMove 1s steps(3) infinite}
 @keyframes grainMove{0%{transform:translate(0,0)}33%{transform:translate(-10px,-15px)}66%{transform:translate(5px,10px)}100%{transform:translate(-5px,5px)}}
+
+/* === TAWK.TO WIDGET FIX === */
+iframe[title="chat widget"],iframe[src*="tawk.to"],.widget-visible{z-index:99999 !important;cursor:auto !important}
+#tawk-bubble-container,#tawk-notification,#tawkchat-container,#tawkchat-minified-box,[class*="tawk"]{cursor:auto !important;pointer-events:auto !important}
 body.dark .grain{opacity:.04}
 
 /* === SCROLLING PROJECT MARQUEE (Avidni-style) === */
